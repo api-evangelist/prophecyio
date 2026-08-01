@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/
+notes: >-
+  Cross-cutting standards conformance. DERIVED from the published OpenAPI
+  documents and the API reference docs; compliance certifications (SOC 2, ISO
+  27001, GDPR) are searched from the Prophecy trust center and captured in
+  security/prophecyio-trust-center.yml.
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: Five published OpenAPI 3.0.3 documents at docs.prophecy.ai/api-reference.
+- id: oauth2
+  conforms: false
+  evidence: API uses per-user Personal Access Tokens (HTTP bearer), not an OAuth2 authorization flow.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error responses are plain JSON with a message; no application/problem+json media type.
+- id: rest-json
+  conforms: true
+  evidence: Resource-oriented JSON over HTTP with standard verbs (GET/POST/PUT/DELETE).
+- id: soc2
+  conforms: true
+  evidence: SOC 2 listed on the Prophecy trust center (trust.prophecy.ai).
+- id: iso-27001
+  conforms: true
+  evidence: ISO/IEC 27001 listed on the Prophecy trust center.
+- id: gdpr
+  conforms: true
+  evidence: GDPR listed on the Prophecy trust center.

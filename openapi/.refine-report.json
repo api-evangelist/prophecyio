@@ -1,0 +1,22 @@
+{
+  "provider": "prophecyio",
+  "sources": [
+    "prophecyio-connections-api-openapi.yml",
+    "prophecyio-fabrics-api-openapi.yml",
+    "prophecyio-pipeline-runs-api-openapi.yml",
+    "prophecyio-project-deployment-api-openapi.yml",
+    "prophecyio-secrets-api-openapi.yml"
+  ],
+  "outputs": [
+    "prophecyio-connections-api-openapi.yml",
+    "prophecyio-fabrics-api-openapi.yml",
+    "prophecyio-pipeline-runs-api-openapi.yml",
+    "prophecyio-project-deployment-api-openapi.yml",
+    "prophecyio-secrets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

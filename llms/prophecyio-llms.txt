@@ -1,0 +1,532 @@
+# Prophecy Documentation
+
+## Docs
+
+- [Get AI chat session information](https://docs.prophecy.ai/administration/getting-help/copy-session-info.md): Copy your session info from an AI chat to share with support
+- [Understand fabric diagnostics](https://docs.prophecy.ai/administration/getting-help/diagnostics.md): Troubleshoot fabric issues using diagnostics
+- [Get in touch](https://docs.prophecy.ai/administration/getting-help/get-in-touch.md)
+- [Download HAR files](https://docs.prophecy.ai/administration/getting-help/har-file.md): Download HAR files to help Prophecy troubleshoot
+- [Send logs to Support](https://docs.prophecy.ai/administration/getting-help/prophecy-details.md): How to download logs and send for support
+- [Security](https://docs.prophecy.ai/administration/getting-help/security.md): Learn about Prophecy security practices
+- [Send Spark cluster details](https://docs.prophecy.ai/administration/getting-help/spark-cluster-details.md): Helpful Spark cluster configurations to send to Support
+- [Prophecy status page](https://docs.prophecy.ai/administration/getting-help/status-page.md): Monitor the health of your Prophecy environment and subscribe to incident notifications
+- [Support requests](https://docs.prophecy.ai/administration/getting-help/submit-request.md): Understand the support request process
+- [Troubleshooting](https://docs.prophecy.ai/administration/getting-help/troubleshooting.md): View common issues and solutions encountered in Prophecy
+- [Audit logs](https://docs.prophecy.ai/administration/management/audit-logs.md): How Prophecy generates, stores, and shares audit logs
+- [Authentication options](https://docs.prophecy.ai/administration/management/authentication/authentication.md): Use your identity provider to sign in to Prophecy
+- [Microsoft Entra ID SSO](https://docs.prophecy.ai/administration/management/authentication/azure-ad.md): Sign-in to Prophecy using your Microsoft Entra ID credentials
+- [Google SSO](https://docs.prophecy.ai/administration/management/authentication/google-sso.md): Sign-in to Prophecy using your Google account credentials
+- [Group-to-team mapping](https://docs.prophecy.ai/administration/management/authentication/group-team-mapping.md): Automatic team creation and user role assignment based on identity provider groups
+- [LDAP authentication](https://docs.prophecy.ai/administration/management/authentication/ldap.md): Connect to your organization LDAP directory for authentication
+- [SAML authentication (SCIM optional)](https://docs.prophecy.ai/administration/management/authentication/saml.md): Leverage SAML for authentication for Prophecy users
+- [Settings list](https://docs.prophecy.ai/administration/management/cluster-admin-settings/cluster-admin-settings.md): Settings visible to cluster admins only
+- [Configure Anthropic endpoint for Prophecy](https://docs.prophecy.ai/administration/management/cluster-admin-settings/configure-endpoint.md): Set up LLM provider for Anthropic Claude in Prophecy.
+- [Copilot settings](https://docs.prophecy.ai/administration/management/cluster-admin-settings/copilot-settings.md): Configure model provider credentials and model specifications for Copilot
+- [Feature management](https://docs.prophecy.ai/administration/management/cluster-admin-settings/feature-management.md): Enable or disable features in your Prophecy deployment
+- [Knowledge graph configuration](https://docs.prophecy.ai/administration/management/cluster-admin-settings/knowledge-graph-config.md): Configure the V4 agent to use the knowledge graph when AI data access is disabled
+- [OAuth app registrations](https://docs.prophecy.ai/administration/management/cluster-admin-settings/oauth-setup.md): Create app registrations in Prophecy for OAuth setup
+- [AI settings](https://docs.prophecy.ai/administration/management/teams/settings/ai.md): Configure AI settings for a team
+- [Default dependencies](https://docs.prophecy.ai/administration/management/teams/settings/default-dependencies.md): Configure default project dependencies for new projects
+- [Project creation templates](https://docs.prophecy.ai/administration/management/teams/settings/project-creation-template.md): Define a set of project creation settings
+- [Spark settings](https://docs.prophecy.ai/administration/management/teams/settings/spark.md): Configure Spark settings for a team
+- [Teams](https://docs.prophecy.ai/administration/management/teams/teams.md): Manage team structure and resources
+- [Credits](https://docs.prophecy.ai/administration/management/usage-billing/credits.md): How credit consumption in Prophecy corresponds to platform usage
+- [Manage billing](https://docs.prophecy.ai/administration/management/usage-billing/usage-billing.md): Learn how billing works across Prophecy editions and how to manage usage and costs
+- [Role-based access control (RBAC)](https://docs.prophecy.ai/administration/management/users/access/role-based-access.md): Manage access by role
+- [Team-based access](https://docs.prophecy.ai/administration/management/users/access/team-based-access.md): Manage access by team
+- [Account settings](https://docs.prophecy.ai/administration/management/users/account-settings.md): Update your Prophecy account details
+- [Team and user provisioning](https://docs.prophecy.ai/administration/management/users/team-user-provisioning.md): Learn how to create new teams and invite users
+- [Architecture](https://docs.prophecy.ai/administration/platform/architecture.md): Understand the infrastructure behind a Prophecy deployment
+- [Editions](https://docs.prophecy.ai/administration/platform/editions.md): Learn about and compare the different Prophecy editions
+- [Deployment models](https://docs.prophecy.ai/administration/platform/prophecy-deployment.md): Understand the SaaS and Dedicated SaaS deployment models
+- [Databricks Partner Connect](https://docs.prophecy.ai/administration/setup/databricks-partner-connect.md): Get started with Prophecy via Databricks Partner Connect
+- [Enterprise Edition](https://docs.prophecy.ai/administration/setup/prophecy-enterprise-guide.md): Complete setup guide for Prophecy Enterprise Edition
+- [Express Edition](https://docs.prophecy.ai/administration/setup/prophecy-express-guide.md): Complete setup guide for Prophecy Express Edition
+- [Add connection to fabric](https://docs.prophecy.ai/api-reference/connections/add-connection-to-fabric.md): Create a new connection in a specific fabric
+- [Delete connection](https://docs.prophecy.ai/api-reference/connections/delete-connection.md): Delete a specific connection by its name
+- [List connections per fabric](https://docs.prophecy.ai/api-reference/connections/list-connections-per-fabric.md): List all connections and their details from a specific fabric
+- [Azure Data Lake Storage connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/adls.md): Properties required to create and update ADLS connections
+- [Google BigQuery](https://docs.prophecy.ai/api-reference/connections/properties/bigquery.md): Properties required to create and update BigQuery connections
+- [Databricks](https://docs.prophecy.ai/api-reference/connections/properties/databricks.md): Properties required to create and update Databricks connections
+- [Google Cloud Storage connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/gcs.md): Properties required to create and update GCS connections
+- [SAP HANA](https://docs.prophecy.ai/api-reference/connections/properties/hana.md): Properties required to create and update SAP HANA connections
+- [Knowledge graph indexer connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/kgconfig.md): Properties for configuring the knowledge graph indexer for a connection
+- [MongoDB connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/mongodb.md): Properties required to create and update MongoDB connections
+- [Microsoft SQL Server](https://docs.prophecy.ai/api-reference/connections/properties/mssql.md): Properties required to create and update MSSQL connections
+- [Microsoft OneDrive connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/onedrive.md): Properties required to create and update OneDrive connections
+- [Oracle connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/oracle.md): Properties required to create and update Oracle connections
+- [Postgres](https://docs.prophecy.ai/api-reference/connections/properties/postgres.md): Properties required to create and update PostgreSQL connections
+- [Microsoft Power BI connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/power-bi.md): Properties required to create and update Power BI connections
+- [Amazon Redshift connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/redshift.md): Properties required to create and update Redshift connections
+- [Amazon S3 connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/s3.md): Properties required to create and update S3 connections
+- [Salesforce connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/salesforce.md): Properties required to create and update Salesforce connections
+- [SFTP connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/sftp.md): Properties required to create and update SFTP connections
+- [Microsoft SharePoint connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/sharepoint.md): Properties required to create and update SharePoint connections
+- [Smartsheet connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/smartsheet.md): Properties required to create and update Smartsheet connections
+- [SMTP connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/smpt.md): Properties required to create and update SMTP connections
+- [Snowflake connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/snowflake.md): Properties required to create and update Snowflake connections
+- [Azure Synapse connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/synapse.md): Properties required to create and update Synapse connections
+- [Tableau connection properties API](https://docs.prophecy.ai/api-reference/connections/properties/tableau.md): Properties required to create and update Tableau connections
+- [Retrieve connection details](https://docs.prophecy.ai/api-reference/connections/retrieve-connection-details.md): Retrieve details for a specific connection by its name
+- [Update connection](https://docs.prophecy.ai/api-reference/connections/update-connection.md): Update the properties of a specific connection
+- [Create a new fabric](https://docs.prophecy.ai/api-reference/fabrics/create-a-new-fabric.md): Create a Prophecy fabric with optional secret and connection
+- [Delete a fabric](https://docs.prophecy.ai/api-reference/fabrics/delete-a-fabric.md): Delete a fabric by its ID
+- [Get fabric details](https://docs.prophecy.ai/api-reference/fabrics/get-fabric-details.md): Retrieve details for a specific fabric by its ID
+- [Update an existing fabric](https://docs.prophecy.ai/api-reference/fabrics/update-an-existing-fabric.md): Update the name or description of an existing fabric
+- [Prophecy API](https://docs.prophecy.ai/api-reference/introduction.md): Use APIs to interact with your Prophecy deployment
+- [Get pipeline run status](https://docs.prophecy.ai/api-reference/pipelines/get-pipeline-run-status.md): Get the status of a triggered pipeline run, including an error message if the pipeline run fails.
+- [Run data tests](https://docs.prophecy.ai/api-reference/pipelines/run-data-tests.md): Execute existing data tests for a project
+- [Trigger pipeline run](https://docs.prophecy.ai/api-reference/pipelines/trigger-pipeline-run.md): Trigger the execution of a pipeline in a deployed project. This is useful when you want to automate pipeline runs without relying on Prophecy's built-in scheduling.
+- [Deploy project](https://docs.prophecy.ai/api-reference/projects/deploy-project.md): Deploy projects with custom pipeline and project configurations to specific fabrics. Use this API to automate project deployment with external CI/CD tools or deploy the same project to different environments with different configuration values.
+- [Add secret to fabric](https://docs.prophecy.ai/api-reference/secrets/add-secret-to-fabric.md): Create a new secret in a specific fabric
+- [Delete secret](https://docs.prophecy.ai/api-reference/secrets/delete-secret.md): Delete a specific secret by its ID
+- [List secrets per fabric](https://docs.prophecy.ai/api-reference/secrets/list-secrets-per-fabric.md): List all secrets and their details from a specific fabric
+- [Binary](https://docs.prophecy.ai/api-reference/secrets/properties/binary.md): API properties for binary secrets
+- [M2M OAuth](https://docs.prophecy.ai/api-reference/secrets/properties/oauth.md): API properties for OAuth secrets
+- [Text](https://docs.prophecy.ai/api-reference/secrets/properties/text.md): API properties for text secrets
+- [Username Password](https://docs.prophecy.ai/api-reference/secrets/properties/username-password.md): API properties for username-password secrets
+- [Retrieve secret details](https://docs.prophecy.ai/api-reference/secrets/retrieve-secret-details.md)
+- [Update secret](https://docs.prophecy.ai/api-reference/secrets/update-secret.md): Update the properties of a specific secret
+- [Prophecy Agent overview](https://docs.prophecy.ai/data-analysis/ai/agent/agent.md): A development agent for building and modifying data pipelines using natural language
+- [Agent governance and data access](https://docs.prophecy.ai/data-analysis/ai/agent/agent-governance.md): How Prophecy agents interact with your data and respects access controls
+- [Analyses](https://docs.prophecy.ai/data-analysis/ai/agent/analyses.md): Structured analytical views generated from pipeline outputs
+- [Export chat session info](https://docs.prophecy.ai/data-analysis/ai/agent/chat/export.md): Export session information from Agent chat for troubleshooting and support
+- [@ mentions](https://docs.prophecy.ai/data-analysis/ai/agent/chat/mentions.md): Use @ mentions to refer to specific entities in your project
+- [Upload files](https://docs.prophecy.ai/data-analysis/ai/agent/chat/upload-files.md): Upload files for data pipelines, analysis, or chat context
+- [Use AI chat in projects](https://docs.prophecy.ai/data-analysis/ai/agent/chat/using-chat.md): Learn how to work with AI chat in Prophecy projects, including managing conversations, referencing entities, reviewing AI-generated changes, and providing context to the Agent.
+- [Copilot Template Language (CTL)](https://docs.prophecy.ai/data-analysis/ai/agent/documentation/ctl-reference.md): Find definitions for markers in Copilot Template Language
+- [Generate documentation](https://docs.prophecy.ai/data-analysis/ai/agent/documentation/documentation.md): Automatically create comprehensive documentation for project pipelines
+- [Exploration](https://docs.prophecy.ai/data-analysis/ai/agent/explore.md): Find and preview data sources using the Prophecy Agent
+- [Harmonization](https://docs.prophecy.ai/data-analysis/ai/agent/harmonization/overview.md): Automate data standardization with harmonization
+- [Supported AI models](https://docs.prophecy.ai/data-analysis/ai/agent/llm-support.md): Supported models, endpoint providers, and plan requirements for Prophecy AI Agents.
+- [Prompting best practices](https://docs.prophecy.ai/data-analysis/ai/agent/prompting-best-practices.md): Guidance for working effectively with the Prophecy Agent using natural language
+- [Transformation](https://docs.prophecy.ai/data-analysis/ai/agent/transform.md): Transform data sources using the Prophecy Agent
+- [Inspect Agent results](https://docs.prophecy.ai/data-analysis/ai/inspect-results.md): Review and verify how the Agent produces answers
+- [Knowledge graph indexer](https://docs.prophecy.ai/data-analysis/ai/knowledge-graph/indexer.md): Configure automatic indexing and authentication for the Knowledge Graph
+- [What is a knowledge graph?](https://docs.prophecy.ai/data-analysis/ai/knowledge-graph/knowledge-graph.md): Prophecy creates a metadata index to power AI features
+- [Add and use skills](https://docs.prophecy.ai/data-analysis/ai/using-skills.md): Contribute skills to Prophecy's AI Agent for specific tasks
+- [Analysis components](https://docs.prophecy.ai/data-analysis/analysis/analysis-components.md): Learn about the components you can use to build interactive analyses
+- [Analysis settings](https://docs.prophecy.ai/data-analysis/analysis/analysis-settings.md): Configure settings for your analysis
+- [Consume analyses](https://docs.prophecy.ai/data-analysis/analysis/consume-analysis.md): Run, configure, and schedule analyses
+- [Create an analysis](https://docs.prophecy.ai/data-analysis/analysis/create-analysis.md): Create and build an analysis dashboard using the Agent or manually
+- [Analyses overview](https://docs.prophecy.ai/data-analysis/analysis/overview.md): Transform raw data into actionable insights with interactive dashboards
+- [Replays](https://docs.prophecy.ai/data-analysis/collaboration/project-replays.md): Share interactive, step-by-step walkthroughs of pipeline development
+- [Project sharing](https://docs.prophecy.ai/data-analysis/collaboration/project-sharing.md): Collaborate by sharing projects for development or viewing
+- [Dependencies](https://docs.prophecy.ai/data-analysis/development/extensibility/dependencies.md): Make use of external or custom components in your projects
+- [Functions](https://docs.prophecy.ai/data-analysis/development/extensibility/functions.md): Build functions with SQL macros to be used in gem expressions
+- [Schema name resolution in SQL projects](https://docs.prophecy.ai/data-analysis/development/extensibility/generate-schema-name.md): How Prophecy resolves schema names in SQL projects and how to restore the default macro if needed
+- [Package hub for Data Analysis](https://docs.prophecy.ai/data-analysis/development/extensibility/package-hub/package-hub.md): Create and share reusable pipeline components
+- [Template Hub](https://docs.prophecy.ai/data-analysis/development/extensibility/package-hub/template-hub.md): Play with sample pipelines provided in the Template Hub
+- [SQL gem builder](https://docs.prophecy.ai/data-analysis/development/extensibility/sql-gem-builder.md): Build custom gems for SQL models and pipelines
+- [Stored procedures](https://docs.prophecy.ai/data-analysis/development/extensibility/stored-procedure.md): Create and call stored procedures to use in pipelines
+- [Deploy parameter sets](https://docs.prophecy.ai/data-analysis/development/parameters/parameter-sets.md): Choose which parameter values are used when pipelines and analyses run
+- [Parameters in Data Analysis](https://docs.prophecy.ai/data-analysis/development/parameters/parameters.md): Reuse values for flexible pipeline execution
+- [Use parameters](https://docs.prophecy.ai/data-analysis/development/parameters/usage.md): Reference parameters in pipelines and analysis dashboards
+- [Pipelines for Data Analysis](https://docs.prophecy.ai/data-analysis/development/pipelines/data-analysis-pipelines.md): Data preparation workflows for transforming warehouse data
+- [View pipeline Python](https://docs.prophecy.ai/data-analysis/development/pipelines/view-pipeline-py.md): Understand how the pipeline.py file defines pipeline structure and execution order.
+- [View SQL lineage](https://docs.prophecy.ai/data-analysis/development/pipelines/view-sql-lineage.md): Track where output columns come from and how they were transformed in Prophecy.
+- [Create a project](https://docs.prophecy.ai/data-analysis/development/projects/create-project.md): How to create a new project in Prophecy
+- [Export compiled code](https://docs.prophecy.ai/data-analysis/development/projects/export-code.md): Export compiled SQL for an entire project or a single pipeline as a ZIP file.
+- [Project languages](https://docs.prophecy.ai/data-analysis/development/projects/project-languages.md): Supported languages for projects
+- [Area chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/area-chart.md): Learn what parameters you need to configure an area chart
+- [Bar chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/bar-chart.md): Learn what parameters you need to configure a bar chart
+- [Candlestick chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/candlestick-chart.md): Learn what parameters you need to configure a candlestick chart
+- [Charts](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/charts.md): View charts of data samples between gems
+- [Line chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/line-chart.md): Learn what parameters you need to configure a line chart
+- [Map chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/map-chart.md): Learn what parameters you need to configure a maker and displacement map chart
+- [Pie chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/pie-chart.md): Learn what parameters you need to configure a pie chart
+- [Scatter chart](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/charts/scatter-chart.md): Learn what parameters you need to configure a scatter chart
+- [Data exploration for Data Analysis](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/data-explorer.md): Generate data samples through the pipeline during development
+- [Data profiling for Data Analysts](https://docs.prophecy.ai/data-analysis/development/runs/data-explorer/data-profile.md): See statistics for data samples in your pipeline
+- [Pipeline runs](https://docs.prophecy.ai/data-analysis/development/runs/execution.md): Explore different ways you can run Prophecy pipelines
+- [Runtime logs](https://docs.prophecy.ai/data-analysis/development/runs/runtime-logs.md): View live and historical information about each operation performed during a pipeline run
+- [Canvas annotations](https://docs.prophecy.ai/data-analysis/development/studio/canvas-annotations.md): Leave comments on your project canvas to annotate pipelines
+- [Visual containers](https://docs.prophecy.ai/data-analysis/development/studio/containers.md): Organize your pipeline into containers to group related transformations
+- [Development settings](https://docs.prophecy.ai/data-analysis/development/studio/development-settings.md): Configure development settings for your project
+- [Pipeline folders](https://docs.prophecy.ai/data-analysis/development/studio/folders.md): Keep your project organized by grouping pipelines in folders
+- [Status messages](https://docs.prophecy.ai/data-analysis/development/studio/messages.md): Understand messages that appear in the Studio
+- [SQL Shell](https://docs.prophecy.ai/data-analysis/development/studio/sql-shell.md): Run ad-hoc SQL queries directly against the warehouse configured for your project.
+- [Studio interface](https://docs.prophecy.ai/data-analysis/development/studio/studio.md): Learn how to use Prophecy's built-in IDE
+- [Wireless connections](https://docs.prophecy.ai/data-analysis/development/studio/wireless-connections.md): Simplify complex pipelines by hiding visual connections while preserving execution logic
+- [Project tests](https://docs.prophecy.ai/data-analysis/development/tests/project-tests.md): Create a pipeline that validates specific data conditions
+- [Table tests](https://docs.prophecy.ai/data-analysis/development/tests/table-tests.md): Create reusable data tests using parameterized SQL
+- [What are data tests?](https://docs.prophecy.ai/data-analysis/development/tests/test-comparison.md): Understand the purpose of different test types in Prophecy
+- [Unit tests for Data Analysis](https://docs.prophecy.ai/data-analysis/development/tests/unit-tests.md): Create unit tests to validate the input and output of individual gems
+- [Clone projects](https://docs.prophecy.ai/data-analysis/development/versioning/clone-projects.md): Create independent copies of existing projects
+- [Version conflicts](https://docs.prophecy.ai/data-analysis/development/versioning/conflicts.md): How to prevent and resolve version conflicts from multiple contributors
+- [Git storage models](https://docs.prophecy.ai/data-analysis/development/versioning/git-storage-model.md): Understand how different Git models work in Prophecy
+- [Import projects](https://docs.prophecy.ai/data-analysis/development/versioning/import-projects.md): Import projects from existing Git repositories
+- [Migrate project repository from Prophecy-managed Git to external Git](https://docs.prophecy.ai/data-analysis/development/versioning/migrate-managed.md): Move the repository of a project from managed-Git to external Git
+- [Version control](https://docs.prophecy.ai/data-analysis/development/versioning/version-control.md): Save and view project history
+- [Azure Data Lake Storage](https://docs.prophecy.ai/data-analysis/environment/connections/adls.md): Connect to Azure Data Lake Storage (ADLS) accounts and containers
+- [Google BigQuery](https://docs.prophecy.ai/data-analysis/environment/connections/bigquery.md): Learn how to connect to BigQuery
+- [Ingest and write data with connections](https://docs.prophecy.ai/data-analysis/environment/connections/connections.md): Use connections to read and write data from external sources
+- [Databricks](https://docs.prophecy.ai/data-analysis/environment/connections/databricks.md): Learn how to connect with Databricks
+- [Google Cloud Storage](https://docs.prophecy.ai/data-analysis/environment/connections/gcs.md): Learn how to connect to Google Cloud Storage (GCS) buckets
+- [SAP HANA](https://docs.prophecy.ai/data-analysis/environment/connections/hana.md): Learn how to connect to SAP HANA
+- [MongoDB](https://docs.prophecy.ai/data-analysis/environment/connections/mongodb.md): Learn how to connect with MongoDB
+- [MSSQL](https://docs.prophecy.ai/data-analysis/environment/connections/mssql.md): Learn how to connect with Microsoft SQL Server
+- [Microsoft OneDrive](https://docs.prophecy.ai/data-analysis/environment/connections/onedrive.md): Learn how to connect to OneDrive
+- [Oracle DB](https://docs.prophecy.ai/data-analysis/environment/connections/oracle.md): Learn how to connect to Oracle
+- [Postgres](https://docs.prophecy.ai/data-analysis/environment/connections/postgres.md): Learn how to connect with PostgreSQL
+- [Microsoft Power BI](https://docs.prophecy.ai/data-analysis/environment/connections/power-bi.md): Learn how to connect with PowerBI
+- [ProphecyManaged](https://docs.prophecy.ai/data-analysis/environment/connections/prophecy-managed.md): Learn about the default ProphecyManaged fabric
+- [Amazon Redshift](https://docs.prophecy.ai/data-analysis/environment/connections/redshift.md): Learn how to connect to Redshift
+- [Amazon S3](https://docs.prophecy.ai/data-analysis/environment/connections/s3.md): Learn how to connect to Amazon S3 buckets
+- [Salesforce](https://docs.prophecy.ai/data-analysis/environment/connections/salesforce.md): Learn how to connect with Salesforce
+- [SFTP](https://docs.prophecy.ai/data-analysis/environment/connections/sftp.md): Learn how to set up SFTP in Prophecy
+- [Microsoft SharePoint](https://docs.prophecy.ai/data-analysis/environment/connections/sharepoint.md): Learn how to connect with SharePoint
+- [Smartsheet](https://docs.prophecy.ai/data-analysis/environment/connections/smartsheet.md): Learn how to connect with Smartsheet
+- [SMTP](https://docs.prophecy.ai/data-analysis/environment/connections/smtp.md): Learn how to configure SMTP
+- [Snowflake](https://docs.prophecy.ai/data-analysis/environment/connections/snowflake.md): Learn how to connect with Snowflake
+- [Azure Synapse dedicated SQL pools](https://docs.prophecy.ai/data-analysis/environment/connections/synapse.md): Learn how to connect with Azure Synapse
+- [Tableau](https://docs.prophecy.ai/data-analysis/environment/connections/tableau.md): Learn how to connect with Tableau
+- [Windows network share](https://docs.prophecy.ai/data-analysis/environment/connections/windows-network-drive.md): Synchronize files from a Windows network share to SharePoint so they can be used in Prophecy
+- [Create a Google BigQuery fabric](https://docs.prophecy.ai/data-analysis/environment/fabrics/create-fabrics/bigquery.md): Connect Prophecy to your Google BigQuery environment
+- [Create a Databricks SQL fabric](https://docs.prophecy.ai/data-analysis/environment/fabrics/create-fabrics/databricks.md): Connect Prophecy to your Databricks SQL warehouse
+- [Create a Snowflake fabric](https://docs.prophecy.ai/data-analysis/environment/fabrics/create-fabrics/snowflake.md): Learn how to connect to Snowflake
+- [What is a fabric?](https://docs.prophecy.ai/data-analysis/environment/fabrics/prophecy-fabrics.md): Fabrics let you connect to external compute and data
+- [Prophecy secrets](https://docs.prophecy.ai/data-analysis/environment/secrets/secrets.md): Use the Prophecy-native secret manager
+- [Gem auto-documentation](https://docs.prophecy.ai/data-analysis/gems/copilot/auto-documentation.md): Generate documentation throughout your pipeline to improve transparency
+- [Generate expressions in gems](https://docs.prophecy.ai/data-analysis/gems/copilot/gem-expressions.md): Automatically generate expressions with natural language
+- [Error fixing](https://docs.prophecy.ai/data-analysis/gems/copilot/gem-fixes.md): Fix gems errors with one click
+- [Condition](https://docs.prophecy.ai/data-analysis/gems/custom/condition.md): Route an input dataset to one of multiple outputs based on ordered conditions.
+- [Directory gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/custom/directory.md): List files and folders of a specified directory
+- [DynamicInput](https://docs.prophecy.ai/data-analysis/gems/custom/dynamic-input.md): Run SQL queries that update dynamically at runtime
+- [Macro](https://docs.prophecy.ai/data-analysis/gems/custom/macro.md): Use dbt macros in your pipelines
+- [RestAPI](https://docs.prophecy.ai/data-analysis/gems/custom/rest-api.md): Call APIs from your pipeline
+- [Script gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/custom/script.md): Embed a custom Python script in your pipeline
+- [SQLStatement gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/custom/sql-statement.md): Use a custom SQL statement
+- [StoredProcedure](https://docs.prophecy.ai/data-analysis/gems/custom/stored-procedure.md): Create and call stored procedures to use in pipelines
+- [ToDo](https://docs.prophecy.ai/data-analysis/gems/custom/todo-gem.md): Create a placeholder gem in your pipeline
+- [Supported data types](https://docs.prophecy.ai/data-analysis/gems/data-types.md): Review the set of data types supported in pipelines
+- [Gems for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/gems.md): Building blocks of your data pipelines
+- [Except](https://docs.prophecy.ai/data-analysis/gems/join-split/except.md): Return rows from the first dataset that do not appear in any of the others
+- [Intersect](https://docs.prophecy.ai/data-analysis/gems/join-split/intersect.md): Return only the rows that are common across all input datasets
+- [Join gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/join-split/join.md): Join two or more datasets
+- [Union](https://docs.prophecy.ai/data-analysis/gems/join-split/union.md): Perform addition of rows from multiple tables
+- [UnionByName](https://docs.prophecy.ai/data-analysis/gems/join-split/union-by-name.md): Combine datasets by aligning columns with the same name
+- [JSONParse](https://docs.prophecy.ai/data-analysis/gems/parse/json-parse.md): Extract and parse JSON from a column
+- [Regex](https://docs.prophecy.ai/data-analysis/gems/parse/regex.md): Pattern matching and text extraction using regular expressions
+- [TextToColumns](https://docs.prophecy.ai/data-analysis/gems/parse/text-to-column.md): Convert text into a column in your table
+- [XMLParse](https://docs.prophecy.ai/data-analysis/gems/parse/xml-parse.md): Parse XML inside a table
+- [DataCleansing gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/data-cleansing.md): Standardize data formats
+- [Deduplicate gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/deduplicate.md): Remove duplicates from your data
+- [Filter gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/filter.md): Keep only rows that match a condition
+- [FindDuplicates](https://docs.prophecy.ai/data-analysis/gems/prepare/find-duplicates.md): Return rows that match a certain count
+- [FlattenSchema gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/flatten-schema.md): Flatten nested columns
+- [GenerateRows](https://docs.prophecy.ai/data-analysis/gems/prepare/generate-rows.md): Create new rows of data using iterative expressions
+- [Imputation](https://docs.prophecy.ai/data-analysis/gems/prepare/imputation.md): Replace specified values in numeric fields with calculated or user-defined replacement values
+- [Limit gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/limit.md): Limit the number of columns processed
+- [DataMasking](https://docs.prophecy.ai/data-analysis/gems/prepare/masking.md): Obfuscate data in one or more columns
+- [MultiColumnEdit](https://docs.prophecy.ai/data-analysis/gems/prepare/multi-column-edit.md): Change the data type of multiple columns at once
+- [MultiColumnRename](https://docs.prophecy.ai/data-analysis/gems/prepare/multi-column-rename.md): Quickly standardize column names using a consistent naming pattern
+- [OrderBy gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/order-by.md): Sort the data
+- [RecordID](https://docs.prophecy.ai/data-analysis/gems/prepare/record-id.md): Assign each row of a table a unique ID
+- [Reformat gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/prepare/reformat.md): Use expressions to reformat column names and values
+- [Tile](https://docs.prophecy.ai/data-analysis/gems/prepare/tile.md): Assign tile values to records by using one of five tiling methods.
+- [Email report gem](https://docs.prophecy.ai/data-analysis/gems/report/email.md): Send your output tables from your pipeline to others via email
+- [PowerBIWrite](https://docs.prophecy.ai/data-analysis/gems/report/power-bi.md): Send your pipeline output directly to PowerBI
+- [TableauWrite](https://docs.prophecy.ai/data-analysis/gems/report/tableau.md): Send data to automatically update your Tableau dashboards
+- [Visualize](https://docs.prophecy.ai/data-analysis/gems/report/visualize.md): Add checkpoints to your pipeline to capture data for analysis dashboards
+- [Add data sources](https://docs.prophecy.ai/data-analysis/gems/source-target/adding-data-sources.md): Use the Environment tab to quickly add tables and files to your pipeline
+- [Google BigQuery external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/bigquery.md): Read and write catalog tables in BigQuery
+- [Databricks external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/databricks.md): Read and write catalog tables in Databricks
+- [SAP HANA external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/hana/hana.md): Read and write from SAP HANA
+- [Generated columns](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/hana/identity-columns.md): Define generated columns in HANA target gems
+- [MongoDB external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/mongodb.md): Read and write from MongoDB
+- [MSSQL external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/mssql.md): Read and write from MSSQL database
+- [Oracle external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/oracle.md): Read and write from Oracle
+- [Postgres external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/postgres.md): Read and write from PostgreSQL database
+- [Amazon Redshift external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/redshift.md): Read and write from Redshift
+- [Salesforce external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/salesforce.md): Read and write from Salesforce
+- [Snowflake external table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/snowflake.md): Read and write from Snowflake
+- [MSSQL on Azure Synapse dedicated SQL pool](https://docs.prophecy.ai/data-analysis/gems/source-target/external-table/synapse.md): Read and write from an Azure Synapse dedicated SQL pool
+- [Azure Data Lake Storage (ADLS)](https://docs.prophecy.ai/data-analysis/gems/source-target/file/adls.md): Use Azure Data Lake Storage as a file source or target in a gem
+- [Databricks Volumes](https://docs.prophecy.ai/data-analysis/gems/source-target/file/databricks-volumes.md): Use Databricks Volumes as a file source or target in a gem
+- [CSV file gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/csv.md): Read and write CSV files
+- [Excel](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/excel.md): Read and write Excel files
+- [Fixed-width](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/fixed-width.md): Read fixed-width files
+- [JSON file gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/json.md): Read and write JSON files
+- [Parquet file gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/parquet.md): Read and write Parquet files
+- [Text file gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/text.md): Read and write text files
+- [XML file gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/source-target/file/file-types/xml.md): Read and write XML files
+- [Google Cloud Storage (GCS)](https://docs.prophecy.ai/data-analysis/gems/source-target/file/gcs.md): Use Google Cloud Storage (GCS) as a file source or target in a gem
+- [Microsoft OneDrive file gem](https://docs.prophecy.ai/data-analysis/gems/source-target/file/onedrive.md): Use OneDrive as a file source or target in a gem
+- [Amazon S3 file gem](https://docs.prophecy.ai/data-analysis/gems/source-target/file/s3.md): Use S3 as a file source or target in a gem
+- [SFTP file gem](https://docs.prophecy.ai/data-analysis/gems/source-target/file/sftp.md): Use SFTP as a file source or target in a gem
+- [Microsoft SharePoint file gem](https://docs.prophecy.ai/data-analysis/gems/source-target/file/sharepoint.md): Use SharePoint as a file source or target in a gem
+- [Smartsheet file gem](https://docs.prophecy.ai/data-analysis/gems/source-target/file/smartsheet.md): Use Smartsheet as a file source or target in a gem
+- [Source and target types](https://docs.prophecy.ai/data-analysis/gems/source-target/source-target.md): Read data into and write data out of your pipelines
+- [Google BigQuery table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/table/bigquery.md): Process BigQuery tables in the SQL warehouse
+- [Databricks table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/table/databricks.md): Process Databricks tables in the SQL warehouse
+- [Prophecy In Memory](https://docs.prophecy.ai/data-analysis/gems/source-target/table/prophecy-warehouse.md): Read and write tables to Prophecy In Memory
+- [Snowflake table gem](https://docs.prophecy.ai/data-analysis/gems/source-target/table/snowflake.md): Process Snowflake tables in the SQL warehouse
+- [Upload files gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/source-target/table/upload-files.md): Upload files to your data warehouse from the visual canvas
+- [Append Row](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/append.md): Always add incoming rows to the existing table
+- [Delete and Insert](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/delete-insert.md): Delete matching rows and insert new rows
+- [SCD2](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/scd2.md): Track historical changes by adding new rows
+- [Upsert Row](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/upsert.md): Update existing rows or insert new rows
+- [Wipe and Replace Partitions](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/wipe-replace-partitions.md): Replace all the rows in a partition
+- [Wipe and Replace Rows Per Predicate](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/wipe-replace-predicate.md): Replace all the rows in a partition that match a predicate
+- [Wipe and Replace Table](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/wipe-replace-table.md): Replace all the rows in the target table
+- [Write options](https://docs.prophecy.ai/data-analysis/gems/source-target/table/write/write-options.md): Choose from multiple write strategies including append, merge, and replace
+- [Buffer](https://docs.prophecy.ai/data-analysis/gems/spatial/buffer.md): Expand or contracts the boundaries of a polygon or line
+- [CreatePoint](https://docs.prophecy.ai/data-analysis/gems/spatial/create-point.md): Create geographic points with longitude and latitude coordinates
+- [Distance](https://docs.prophecy.ai/data-analysis/gems/spatial/distance.md): Calculate the distance between two points
+- [Heatmap](https://docs.prophecy.ai/data-analysis/gems/spatial/heatmap.md): Generate spatial heatmaps from geo point data using hexagons
+- [FindNearest](https://docs.prophecy.ai/data-analysis/gems/spatial/nearest-point.md): Identify the shortest distance between spatial objects
+- [PolyBuild](https://docs.prophecy.ai/data-analysis/gems/spatial/polybuild.md): Create a polygon or polyline from a set of coordinates
+- [Simplify](https://docs.prophecy.ai/data-analysis/gems/spatial/simplify.md): Decrease the number of nodes that make up a polygon or polyline
+- [SpatialMatch](https://docs.prophecy.ai/data-analysis/gems/spatial/spatial-match.md): Find relationships between geographic features
+- [Aggregate gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/transform/aggregate.md): Group and summarize your data using GROUP BY and aggregation functions
+- [CountRecords](https://docs.prophecy.ai/data-analysis/gems/transform/count-records.md): Returns one integer that represents the count of records in the input dataset
+- [DynamicSelect gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/transform/dynamic-select.md): Dynamically filter columns of your dataset based on a set of conditions
+- [DataEncoderDecoder](https://docs.prophecy.ai/data-analysis/gems/transform/encoder-decoder.md): Encode and decode data using different techniques
+- [FuzzyMatch gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/transform/fuzzy-match.md): Match records that are not exactly identical
+- [Pivot](https://docs.prophecy.ai/data-analysis/gems/transform/pivot.md): Convert your table from long to wide format
+- [RunningTotal](https://docs.prophecy.ai/data-analysis/gems/transform/running-total.md): Calculate running totals for selected numeric columns.
+- [Unpivot gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/transform/unpivot.md): Convert your table from wide to long format
+- [WeightedAverage](https://docs.prophecy.ai/data-analysis/gems/transform/weighted-average.md): Calculate the weighted average of a numeric field using another numeric field as the weight
+- [WindowFunction gem for Data Analysis](https://docs.prophecy.ai/data-analysis/gems/transform/window.md): Create moving aggregations and transformation
+- [Common expression patterns](https://docs.prophecy.ai/data-analysis/gems/visual-expression-builder/use-the-visual-expression-builder.md): Build conditional logic, filters, and reusable expressions with the visual expression builder
+- [Variant data type](https://docs.prophecy.ai/data-analysis/gems/visual-expression-builder/variant-schema.md): About variant data types and how to update their schema
+- [Visual expression builder](https://docs.prophecy.ai/data-analysis/gems/visual-expression-builder/visual-expression-builder.md): About the visual expression builder
+- [Visual expressions reference](https://docs.prophecy.ai/data-analysis/gems/visual-expression-builder/visual-expression-builder-reference.md): visual expression builder reference
+- [Concepts for Data Analysts](https://docs.prophecy.ai/data-analysis/getting-started/concepts.md): Core concepts for data analysts working with Prophecy
+- [Use Professional Edition](https://docs.prophecy.ai/data-analysis/getting-started/professional-edition.md): A managed, AI-first analytics environment for data analyst teams
+- [Quickstart for Data Analysts](https://docs.prophecy.ai/data-analysis/getting-started/quick-start.md): Use the Agent to develop a simple pipeline
+- [Monitoring](https://docs.prophecy.ai/data-analysis/production/monitoring.md): Review your deployed projects, scheduled pipelines, and run history
+- [Publication concepts](https://docs.prophecy.ai/data-analysis/production/publication/publication-concepts.md): Understand drafts, published versions, deployments, and fabrics in SQL and Model projects
+- [Publish and deploy projects](https://docs.prophecy.ai/data-analysis/production/publication/publish-project.md): Publish SQL projects and deploy them to fabrics
+- [Email alerts](https://docs.prophecy.ai/data-analysis/production/scheduling/alerts.md): Report the outcome of a scheduled pipeline run
+- [Pipeline gem](https://docs.prophecy.ai/data-analysis/production/scheduling/pipeline-trigger-gem.md): Start pipeline runs from a gem in the canvas
+- [Schedule setup](https://docs.prophecy.ai/data-analysis/production/scheduling/schedule-setup.md): Follow the steps to configure the Prophecy scheduler
+- [Scheduling](https://docs.prophecy.ai/data-analysis/production/scheduling/scheduling.md): Automate your pipeline runs using schedules
+- [Trigger types](https://docs.prophecy.ai/data-analysis/production/scheduling/triggers.md): Learn about different trigger types for schedules
+- [Data diff](https://docs.prophecy.ai/data-engineering/ci-cd/data-diff.md): View the difference between a target dataset and an expected dataset
+- [Deployment workflow](https://docs.prophecy.ai/data-engineering/ci-cd/deployment/deploy-project.md): Learn how to use Git for deployment
+- [Project release and deployment](https://docs.prophecy.ai/data-engineering/ci-cd/deployment/deployment.md): Release projects and deploy jobs
+- [External release tags](https://docs.prophecy.ai/data-engineering/ci-cd/deployment/use-external-release-tags.md): Use external release tags for deployment and dependency in Prophecy
+- [Git best practices](https://docs.prophecy.ai/data-engineering/ci-cd/git/best-practices.md): Learn about what we recommend to do if you are working with Git.
+- [Set up Git credentials](https://docs.prophecy.ai/data-engineering/ci-cd/git/git.md): Connect external repositories to Prophecy
+- [Resolve conflicts](https://docs.prophecy.ai/data-engineering/ci-cd/git/git-resolve.md): Resolve conflicts that you may run into while merging your changes
+- [Git workflow](https://docs.prophecy.ai/data-engineering/ci-cd/git/git-workflow.md): Follow the Git workflow in your Prophecy project
+- [Pull requests](https://docs.prophecy.ai/data-engineering/ci-cd/git/pull-request-templates.md): Open Pull Requests from within Prophecy
+- [PBT on GitHub Actions](https://docs.prophecy.ai/data-engineering/ci-cd/prophecy-build-tool/pbt-github-actions.md): Example usage of Prophecy Build Tool on GitHub Actions
+- [PBT on Jenkins](https://docs.prophecy.ai/data-engineering/ci-cd/prophecy-build-tool/pbt-jenkins.md): Example Usage of Prophecy Build Tool on Jenkins
+- [Use Prophecy Automate with PBT](https://docs.prophecy.ai/data-engineering/ci-cd/prophecy-build-tool/pbt-prophecy-automate.md): Use Prophecy Build tool with Prophecy Automate
+- [Prophecy Build Tool (PBT)](https://docs.prophecy.ai/data-engineering/ci-cd/prophecy-build-tool/prophecy-build-tool.md): Prophecy Build tool
+- [CI/CD strategies](https://docs.prophecy.ai/data-engineering/ci-cd/reliable-ci-cd.md): Set up CI/CD in Prophecy using environment separation and testing
+- [Unit tests for Data Engineering](https://docs.prophecy.ai/data-engineering/ci-cd/tests.md): Implementing unit tests in Prophecy
+- [Data Engineering best practices](https://docs.prophecy.ai/data-engineering/development/best-practices.md): Learn how to best use Prophecy for data engineering projects
+- [Spark Copilot](https://docs.prophecy.ai/data-engineering/development/copilot/copilot.md): See how Copilot can help you build your pipeline
+- [Data exploration for Data Engineers](https://docs.prophecy.ai/data-engineering/development/data-explorer/data-explorer.md): Inspect interim data samples at each stage of your pipeline
+- [Data profiling for Data Engineers](https://docs.prophecy.ai/data-engineering/development/data-explorer/data-profile.md): See high level statistics for data samples in your pipeline
+- [Datasets](https://docs.prophecy.ai/data-engineering/development/dataset.md): Use datasets in your Spark project
+- [Business rules](https://docs.prophecy.ai/data-engineering/development/functions/business-rules-engine/business-rules-engine.md): Use business rules to automate business decisions
+- [User-defined functions](https://docs.prophecy.ai/data-engineering/development/functions/user-defined-functions.md): Create and import UDFs in your pipeline
+- [Model configurations](https://docs.prophecy.ai/data-engineering/development/models/configuration.md): Configure SQL project and model variables
+- [What are SQL models?](https://docs.prophecy.ai/data-engineering/development/models/models.md): Models define a single target table or view in a SQL warehouse
+- [Dynamic target location](https://docs.prophecy.ai/data-engineering/development/models/sources-target/location.md): Use a dynamic location for your target model
+- [Model sources and targets](https://docs.prophecy.ai/data-engineering/development/models/sources-target/sources-target.md): Use models to read and write data
+- [BigQuery target models](https://docs.prophecy.ai/data-engineering/development/models/target-platforms/bigquery-target.md): Configure target models for BigQuery SQL
+- [Databricks target models](https://docs.prophecy.ai/data-engineering/development/models/target-platforms/databricks-target.md): Configure target models for Databricks SQL
+- [Snowflake target models](https://docs.prophecy.ai/data-engineering/development/models/target-platforms/snowflake-target.md): Configure target models for Snowflake SQL
+- [Configurations](https://docs.prophecy.ai/data-engineering/development/pipelines/configuration.md): Control how a pipeline behaves during execution
+- [Pipeline settings](https://docs.prophecy.ai/data-engineering/development/pipelines/pipeline-settings.md): Control how your pipeline runs
+- [Pipelines for Data Engineering](https://docs.prophecy.ai/data-engineering/development/pipelines/pipelines.md): Flows that represent the data journey
+- [Secrets in pipeline configurations](https://docs.prophecy.ai/data-engineering/development/pipelines/secrets-configs.md): Store secrets in pipeline config
+- [Conditional execution](https://docs.prophecy.ai/data-engineering/development/runs/conditional-execution.md): Conditionally run or skip transformations within pipelines
+- [Data sampling](https://docs.prophecy.ai/data-engineering/development/runs/data-sampling.md): Choose when to sample data during interactive execution
+- [Run types](https://docs.prophecy.ai/data-engineering/development/runs/execution.md): Different ways you can run Prophecy pipelines
+- [Spark structured streaming](https://docs.prophecy.ai/data-engineering/development/spark-streaming/spark-streaming.md): Learn about streaming data running on Spark Structured Streaming
+- [Event-based](https://docs.prophecy.ai/data-engineering/development/spark-streaming/streaming-sources-and-targets/streaming-event-gem.md): Event-based Source and Target Gems for Streaming Data Applications
+- [File-based](https://docs.prophecy.ai/data-engineering/development/spark-streaming/streaming-sources-and-targets/streaming-file-gem.md): File-based Source and Target gems for Streaming Data Applications
+- [Warehouse-based](https://docs.prophecy.ai/data-engineering/development/spark-streaming/streaming-sources-and-targets/streaming-warehouse-gem.md): Warehouse-based Source gem for Streaming Data Applications
+- [Streaming transformations](https://docs.prophecy.ai/data-engineering/development/spark-streaming/streaming-transformations.md): Learn about transformations in streaming data
+- [Prophecy libraries](https://docs.prophecy.ai/data-engineering/extensibility/dependencies/prophecy-libs.md): Prophecy provides small and lightweight utility libraries for Spark
+- [Spark dependencies](https://docs.prophecy.ai/data-engineering/extensibility/dependencies/spark-dependencies.md): Reuse Spark dependencies in pipelines and jobs
+- [Gem Builder reference for Spark](https://docs.prophecy.ai/data-engineering/extensibility/gem-builder/gem-builder-reference.md): Detailed explanation of custom gem code structure
+- [Build Gem UI](https://docs.prophecy.ai/data-engineering/extensibility/gem-builder/gem-builder-ui.md): Build the UI of your custom gem using uispec.py classes
+- [Optimization functions](https://docs.prophecy.ai/data-engineering/extensibility/gem-builder/optimization-functions.md): Disable or enable optimizations in your custom gems
+- [Gem Builder for Spark](https://docs.prophecy.ai/data-engineering/extensibility/gem-builder/spark-gem-builder.md): Build Spark gems in Python or Scala
+- [Package hub for Data Engineering](https://docs.prophecy.ai/data-engineering/extensibility/package-hub/package-hub.md): Create and share reusable pipeline components
+- [Use imported packages](https://docs.prophecy.ai/data-engineering/extensibility/package-hub/use-imported-package.md): Reuse project components via packages
+- [Execution metrics](https://docs.prophecy.ai/data-engineering/fabrics/execution-metrics.md): Track pipeline performance data
+- [Secrets](https://docs.prophecy.ai/data-engineering/fabrics/secret-providers.md): Store sensitive values in secret management systems
+- [UC cluster compatibility](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/databricks/UCShared.md): Review which Prophecy features can run on Unity Catalog clusters
+- [Create a Databricks fabric](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/databricks/databricks.md): Connect Prophecy to your existing Databricks workspace
+- [Databricks policies](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/databricks/databricks-policies.md): Review the impact of Databricks policies in Prophecy
+- [Databricks serverless compute for PySpark](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/databricks/databricks-serverless.md): Use Databricks serverless compute to execute PySpark pipelines
+- [Set up libraries in Databricks volumes](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/databricks/volumes-plibs.md): Add libraries directly to volumes when Maven/PyPI is blocked on Databricks
+- [Add Prophecy libraries to allowlist for UC standard clusters](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/databricks/whitelist-plibs.md): Make ProphecyLibs available to Databricks UC standard clusters
+- [Google Cloud Dataproc](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/dataproc.md): Set up a Google Cloud Dataproc fabric
+- [Amazon EMR](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/emr/emr.md): Use Amazon EMR via Livy as your Spark execution engine
+- [Configure EMR job sizes](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/emr/emr-job-sizes.md): Learn how to configure EMR job sizes for Spark fabrics
+- [Configure EMR SAML authentication with Okta](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/emr/emr-saml.md): Set up AWS EMR authentication using Okta
+- [Livy](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/livy/livy.md): Set up a Livy fabric
+- [Install additional libraries](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/livy/selective-sampling.md): Add required Python libraries to your Livy cluster
+- [Trial fabric](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/prophecy-managed.md): Use a Prophecy-managed free trial fabric
+- [Create an Azure Synapse fabric](https://docs.prophecy.ai/data-engineering/fabrics/spark-provider/synapsefabric.md): Set up an Azure Synapse fabric
+- [Snowflake SQL fabric](https://docs.prophecy.ai/data-engineering/fabrics/sql-provider/snowflake.md): Run models on a Snowflake warehouse
+- [DeltaTableOperations](https://docs.prophecy.ai/data-engineering/gems/custom/delta-table-operations.md): Gem that encompasses some of the import side operations of Delta
+- [Directory gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/custom/directory.md): Return a listing of all the files in a specified directory
+- [Email gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/custom/email.md): Send emails via your Spark pipeline
+- [EmailData](https://docs.prophecy.ai/data-engineering/gems/custom/email-data.md): Send data from your Spark pipeline to others by email
+- [FileOperation](https://docs.prophecy.ai/data-engineering/gems/custom/file-operation.md): Perform file operations on different file systems
+- [RestAPIEnrich](https://docs.prophecy.ai/data-engineering/gems/custom/rest-api-enrich.md): Enrich DataFrame with content from rest API response based on configuration
+- [Script gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/custom/script.md): Provide a place to use a SparkSession and whatever code you wish to use
+- [SQLStatement gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/custom/sql-statement.md): Create DataFrames based on custom SQL queries
+- [Tableau gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/custom/tableau.md): Send data from your Spark pipeline to Tableau
+- [Expression builder](https://docs.prophecy.ai/data-engineering/gems/expression-builder.md): Expression Builder
+- [Gems for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/gems.md): Prophecy Spark Gems
+- [CompareColumns](https://docs.prophecy.ai/data-engineering/gems/join-split/compare-columns.md): Compare columns between two dataframes
+- [Join gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/join-split/join.md): Join one or more DataFrames on conditions
+- [Repartition](https://docs.prophecy.ai/data-engineering/gems/join-split/repartition.md): Repartition or coalesce a DataFrame
+- [RowDistributor](https://docs.prophecy.ai/data-engineering/gems/join-split/row-distributor.md): Create multiple DataFrames based on filter conditions
+- [Generative AI Chatbot](https://docs.prophecy.ai/data-engineering/gems/machine-learning/genaichatbot.md): Build a generative AI application that answers questions in Slack based on relevant content from the web.
+- [OpenAI](https://docs.prophecy.ai/data-engineering/gems/machine-learning/ml-openai.md): Request OpenAI to generate a vector embedding or request OpenAI to answer a question with an optional context.
+- [PineconeLookup](https://docs.prophecy.ai/data-engineering/gems/machine-learning/ml-pinecone-lookup.md): Lookup a vector embedding from a Pinecone Database
+- [TextProcessing](https://docs.prophecy.ai/data-engineering/gems/machine-learning/ml-text-processing.md): Text processing to prepare data to submit to a foundational model API.
+- [Delta Table](https://docs.prophecy.ai/data-engineering/gems/source-target/catalog-table/delta.md): Read from or write to tables managed by a Delta table metastore
+- [Hive Table](https://docs.prophecy.ai/data-engineering/gems/source-target/catalog-table/hive.md): Read from or write to tables managed by a Hive metastore
+- [Iceberg](https://docs.prophecy.ai/data-engineering/gems/source-target/catalog-table/iceberg.md): Read from or write to tables managed by Iceberg
+- [Avro](https://docs.prophecy.ai/data-engineering/gems/source-target/file/avro.md): Parameters and properties to read from and write to Avro files
+- [CSV file gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/source-target/file/csv.md): Parameters and properties to read from and write to CSV files
+- [Delta](https://docs.prophecy.ai/data-engineering/gems/source-target/file/delta.md): Parameters and properties to read from and write to Delta files
+- [Fixed Format](https://docs.prophecy.ai/data-engineering/gems/source-target/file/fixed-format.md): Parameters and properties to read from and write to Fixed Format files
+- [JSON file gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/source-target/file/json.md): Parameters and properties to read from and write to JSON files
+- [Kafka](https://docs.prophecy.ai/data-engineering/gems/source-target/file/kafka-stream.md): Parameters and properties to read from and write to Kafka files
+- [ORC](https://docs.prophecy.ai/data-engineering/gems/source-target/file/orc.md): Parameters and properties to read from and write to ORC files
+- [Parquet file gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/source-target/file/parquet.md): Parameters and properties to read from and write to Parquet files
+- [Seed](https://docs.prophecy.ai/data-engineering/gems/source-target/file/seed.md): Parameters and properties to read from Seed files
+- [Data Generator](https://docs.prophecy.ai/data-engineering/gems/source-target/file/synthetic-data-generator.md): Learn how to create synthetic data
+- [Text file gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/source-target/file/text.md): Parameters and properties to read from and write to Text file
+- [Upload files gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/source-target/file/upload-file.md): Learn how to upload files to your Spark pipeline
+- [XLSX (Excel)](https://docs.prophecy.ai/data-engineering/gems/source-target/file/xlsx.md): Parameters and properties to read from and write to XLSX (Excel) files using Spark
+- [XML file gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/source-target/file/xml.md): Parameters and properties to read from and write to XML files
+- [Lookup](https://docs.prophecy.ai/data-engineering/gems/source-target/lookup.md): Lookup
+- [BigQuery](https://docs.prophecy.ai/data-engineering/gems/source-target/warehouse/bigquery.md): Parameters and properties to read from and write to the BigQuery warehouse
+- [CosmosDB](https://docs.prophecy.ai/data-engineering/gems/source-target/warehouse/cosmos.md): Parameters and properties to read from and write to the CosmosDB warehouse
+- [JDBC](https://docs.prophecy.ai/data-engineering/gems/source-target/warehouse/jdbc.md): Parameters and properties to read from and write to the JDBC warehouse
+- [MongoDB warehouse gem](https://docs.prophecy.ai/data-engineering/gems/source-target/warehouse/mongodb.md): Parameters and properties to read from and write to the MongoDB warehouse.
+- [Redshift](https://docs.prophecy.ai/data-engineering/gems/source-target/warehouse/redshift.md): Parameters and properties to read from and write to the Redshift warehouse.
+- [Snowflake warehouse gem](https://docs.prophecy.ai/data-engineering/gems/source-target/warehouse/snowflake.md): Parameters and properties to read from and write to the Snowflake warehouse.
+- [Salesforce web app gem](https://docs.prophecy.ai/data-engineering/gems/source-target/web-apps/salesforce.md): Salesforce
+- [Smartsheet web app gem](https://docs.prophecy.ai/data-engineering/gems/source-target/web-apps/smartsheet.md): Use data from Smartsheet in your Spark pipeline
+- [Subgraph](https://docs.prophecy.ai/data-engineering/gems/subgraph/basicSubgraph.md): Basic Subgraph, Group your Gems in reusable Parent Gems.
+- [What are Subgraphs?](https://docs.prophecy.ai/data-engineering/gems/subgraph/subgraph.md): Reuse small flows in your pipelines
+- [TableIterator](https://docs.prophecy.ai/data-engineering/gems/subgraph/tableIterator.md): Loop over each row of an input Dataframe
+- [WhileIterator](https://docs.prophecy.ai/data-engineering/gems/subgraph/while-iterator.md): Recursively processes rows
+- [Aggregate gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/aggregate.md): Group data and apply aggregation methods or pivot operations
+- [BulkColumnExpressions](https://docs.prophecy.ai/data-engineering/gems/transform/bulk-column-expressions.md): Change the data type of multiple columns at once
+- [BulkColumnRename](https://docs.prophecy.ai/data-engineering/gems/transform/bulk-column-rename.md): Rename multiple columns in your dataset in a systematic way
+- [ColumnParser](https://docs.prophecy.ai/data-engineering/gems/transform/column-parser.md): Parse XML or JSON inside a table
+- [DataCleansing gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/data-cleansing.md): Standardize data formats and address missing or null values in the data
+- [DataQualityCheck](https://docs.prophecy.ai/data-engineering/gems/transform/data-quality-check.md): Ensure your data adhere to predefined constraints
+- [Deduplicate gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/deduplicate.md): Remove rows with duplicate values of specified columns
+- [DynamicReplace](https://docs.prophecy.ai/data-engineering/gems/transform/dynamic-replace.md): Dynamically generate values depending on certain conditions
+- [DynamicSelect gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/dynamic-select.md): Dynamically filter columns of your dataset based on a set of conditions
+- [Filter gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/filter.md): Filter your data based on a custom filter condition
+- [FlattenSchema gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/flattenschema.md): Flatten nested data
+- [FuzzyMatch gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/fuzzy-match.md): Identify non-identical duplicates in your data
+- [Limit gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/limit.md): Limit the number of rows
+- [OrderBy gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/order-by.md): Sort your data based on one or more columns
+- [Reformat gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/reformat.md): Select one or more columns or values using expressions and functions
+- [SampleRows](https://docs.prophecy.ai/data-engineering/gems/transform/sample-rows.md): Sample records by choosing a specific number or percentage of records
+- [SchemaTransform](https://docs.prophecy.ai/data-engineering/gems/transform/schema-transform.md): Add, Edit, Rename or Drop Columns
+- [SetOperation](https://docs.prophecy.ai/data-engineering/gems/transform/set-operation.md): Union, Intersect and Difference
+- [Unpivot gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/unpivot.md): Use the Unpivot gem to transform your data from a wide format to a long format
+- [WindowFunction gem for Data Engineering](https://docs.prophecy.ai/data-engineering/gems/transform/window-function.md): Aggregate and transform Windowed data
+- [Concepts for Data Engineers](https://docs.prophecy.ai/data-engineering/getting-started/concepts.md): Core concepts for data engineers working with Prophecy
+- [Quickstart for Data Engineering](https://docs.prophecy.ai/data-engineering/getting-started/quick-start.md): Create a Spark pipeline for data engineering
+- [Lineage](https://docs.prophecy.ai/data-engineering/lineage/lineage.md): Understand and explore project lineage
+- [Lineage extractor](https://docs.prophecy.ai/data-engineering/lineage/lineage-extractor.md): Prophecy lineage extractor on GitHub Actions
+- [Alternative Schedulers](https://docs.prophecy.ai/data-engineering/orchestration/alternative-schedulers.md): Support for Alternative Orchestration Solutions
+- [Databricks Jobs](https://docs.prophecy.ai/data-engineering/orchestration/databricks-jobs.md): Databricks jobs
+- [Multi Jobs Trigger](https://docs.prophecy.ai/data-engineering/orchestration/multi-jobs-trigger.md): Complex pipeline interactions and timing
+- [Enable Pipeline Monitoring](https://docs.prophecy.ai/data-engineering/orchestration/pipeline-monitoring/enable-pipeline-monitoring.md): How to enable Pipeline Monitoring for Spark
+- [Pipeline Monitoring](https://docs.prophecy.ai/data-engineering/orchestration/pipeline-monitoring/pipeline-monitoring.md): About Pipeline Monitoring for Spark
+- [Use Pipeline Monitoring](https://docs.prophecy.ai/data-engineering/orchestration/pipeline-monitoring/use-pipeline-monitoring.md): How to use Pipeline Monitoring for Spark
+- [Ab Initio](https://docs.prophecy.ai/import-tool/abinitio/abinitio.md): Simplify Ab Initio migration with Transpiler
+- [Ab Initio component mapping](https://docs.prophecy.ai/import-tool/abinitio/abinitio-components.md): List of supported Ab Initio components
+- [Ab Initio function mapping](https://docs.prophecy.ai/import-tool/abinitio/abinitio-functions.md): List of supported Ab Initio Functions
+- [Log Gem](https://docs.prophecy.ai/import-tool/abinitio/abinitio-gems/log.md): Emit structured execution and custom log events from a pipeline
+- [Normalize](https://docs.prophecy.ai/import-tool/abinitio/abinitio-gems/normalize.md): Generate multiple output records per input record
+- [Sequence](https://docs.prophecy.ai/import-tool/abinitio/abinitio-gems/sequence.md): Generate incremental values for each record
+- [SurrogateKeyGenerator gem](https://docs.prophecy.ai/import-tool/abinitio/abinitio-gems/surrogate-key-generator.md): Add new column with monotonically-increasing surrogate key
+- [Convert Plans into Airflow DAGs](https://docs.prophecy.ai/import-tool/abinitio/abinitio-plans.md): Recreate Ab Initio plans in Prophecy orchestration via Airflow
+- [Ab Initio migration overview](https://docs.prophecy.ai/import-tool/abinitio/getting-started-with-Abinitio.md): A tutorial on using Ab Initio Transpiler
+- [Missing Artifacts](https://docs.prophecy.ai/import-tool/abinitio/trouble-shooting/missing-files.md): A tutorial on how to deal with missing files
+- [Troubleshoot Issues](https://docs.prophecy.ai/import-tool/abinitio/trouble-shooting/trouble-shooting.md): A tutorial on Troubleshooting issues
+- [Analyze tool](https://docs.prophecy.ai/import-tool/alteryx/alteryx-migration-analysis.md): Understand the outcome of your Alteryx transpilation
+- [Connection mapping](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/alteryx-connections.md): Explains how Alteryx connections map to Prophecy
+- [Migrate to SQL (Databricks, BigQuery, Snowflake)](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/alteryx-to-sql.md): How to migrate Alteryx workflows to SQL using Databricks, BigQuery, or Snowflake fabrics
+- [Data type mapping](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/data-type-mapping.md): Explains how Alteryx data types map to Prophecy SQL data types
+- [Performance tuning scenarios](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/databricks-performance-tuning.md): Learn how to tune the performance of your transpiled Alteryx workflow in Databricks SQL
+- [Alteryx function mapping](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/function-mapping.md): List of supported Alteryx functions and how they map to Prophecy SQL
+- [Getting Started in Prophecy for Alteryx Users](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/getting-started-prophecy-alteryx.md): Move from Alteryx to Prophecy
+- [SQL dialect differences](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/sql-dialect-differences.md): Behavioral differences between Databricks SQL, BigQuery, and Snowflake when importing Alteryx workflows into Prophecy
+- [Alteryx Browse tool > Prophecy Data Explorer](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-in-out-tools/alteryx-browse-tool.md): Mapping between Alteryx’s Browse Tool and Prophecy’s Data Explorer
+- [Alteryx DateTime Now Tool > Prophecy Reformat Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-in-out-tools/alteryx-datetime-now.md): Mapping between Alteryx’s DateTime Now Tool and Prophecy’s Reformat Gem for implementing date and time logic, plus a function-by-function conversion table.
+- [Alteryx Directory Tool > Prophecy Directory Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-in-out-tools/alteryx-directory-tool.md): Mapping between Alteryx’s Directory tool and Prophecy’s Directory gem
+- [Alteryx Input Data Tool > Prophecy Table & Source Gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-in-out-tools/alteryx-input-data-tool.md): Mapping between Alteryx’s Input Data tool and Prophecy’s Table and Source gems
+- [Alteryx Output Data Tool > Prophecy Target Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-in-out-tools/alteryx-output-data-tool.md): Mapping between Alteryx’s Output Data Tool and Prophecy’s Target Gem
+- [Alteryx Text Input Tool > Prophecy Table Gem (Seed)](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-in-out-tools/alteryx-text-input-tool.md): Mapping between Alteryx’s Text Input Tool and a Prophecy Table Gem configured as a Seed
+- [Alteryx Append Fields tool > Prophecy Join gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-join-tools/alteryx-append-fields.md): Mapping between Alteryx’s Append Fields tool and the Prophecy Join gem
+- [Alteryx Find Replace tool > Prophecy Join gem + Reformat gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-join-tools/alteryx-find-replace.md): Mapping between Alteryx’s Find Replace tool and Prophecy's Join and Reformat gems.
+- [Alteryx Join tool > Prophecy Join gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-join-tools/alteryx-join.md): Mapping between Alteryx’s Join tool and the Prophecy Join gem
+- [Alteryx Join Multiple tool > Prophecy Join gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-join-tools/alteryx-join-multiple.md): Mapping between Alteryx’s Join Multiple tool and the Prophecy Join gem
+- [Alteryx Union tool > Prophecy Union gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-join-tools/alteryx-union.md): Mapping between Alteryx’s Union tool and the Prophecy Union gem
+- [Alteryx DateTime tool > Prophecy Reformat gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-parse-tools/alteryx-datetime.md): Mapping between Alteryx's DateTime tool and Prophecy date/time formatting in the Reformat gem
+- [Alteryx RegEx Tool > Prophecy Regex Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-parse-tools/alteryx-regex.md): Mapping between Alteryx's RegEx Tool and Prophecy's Regex Gem
+- [Alteryx XML Parse Tool > Prophecy XMLParse gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-parse-tools/alteryx-xml-parse.md): Mapping between Alteryx's XML Parse Tool and Prophecy's XMLParse Gem
+- [Alteryx Data Cleansing tool > Prophecy Data Cleansing gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-data-cleansing-tool.md): Mapping between Alteryx’s Data Cleansing tool and Prophecy’s Data Cleansing gem
+- [Alteryx Filter Tool > Prophecy Filter Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-filter-tool.md): Mapping between Alteryx’s Filter Tool and Prophecy’s Filter Gem
+- [Alteryx Formula tool > Prophecy Reformat gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-formula-tool.md): Mapping between Alteryx’s Formula tool and Prophecy’s Reformat gem
+- [Alteryx Imputation tool > Prophecy Reformat + Join gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-imputation-tool.md): Mapping between Alteryx’s Imputation tool and equivalent Prophecy gems
+- [Alteryx Multi-Field Binning tool > Prophecy Reformat + Join gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-multi-field-binning-tool.md): Mapping between Alteryx’s Multi-Field Binning tool and equivalent Prophecy gems
+- [Alteryx Multi-Field Formula tool > Prophecy Multi-Column Edit Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-multi-field-formula-tool.md): Mapping between Alteryx’s Multi-Field Formula tool and Prophecy’s Multi-Column Edit gem
+- [Alteryx Multi-Row Formula tool > Prophecy WindowFunction gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-multi-row-formula-tool.md): Mapping between Alteryx’s Multi-Row Formula tool and Prophecy’s Window Functions gem
+- [Alteryx Oversample Field tool > Prophecy Reformat + Filter gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-prep-tools/alteryx-oversample-field-tool.md): Mapping between Alteryx’s Oversample Field tool and equivalent Prophecy gems
+- [Alteryx to SQL tool mapping](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-tool-mapping.md): List of supported Alteryx components and how they map to Prophecy SQL gems
+- [Alteryx Arrange Tool > Prophecy Reformat Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-arrange.md): Mapping between Alteryx’s Arrange tool and equivalent transformations using Prophecy's Reformat gem
+- [Alteryx Count Records tool > Prophecy CountRecords gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-count-records.md): Mapping between Alteryx's Count Records tool and Prophecy's CountRecords gem
+- [Alteryx Cross Tab tool > Prophecy Pivot gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-cross-tab.md): Mapping between Alteryx’s Cross Tab tool and Prophecy’s Pivot gem
+- [Alteryx Make Columns tool > Prophecy WindowFunction + Reformat + Aggregation Gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-make-columns.md): Mapping between Alteryx’s Make Columns tool and its imported representation in Prophecy
+- [Alteryx Running Total tool > Prophecy WindowFunction Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-running-total.md): Mapping between Alteryx's Running Total tool and cumulative calculations implemented using the Prophecy WindowFunction gem
+- [Alteryx Summarize Tool > Prophecy Aggregate, Reformat, and Deduplicate Gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-summarize.md): Mapping between Alteryx's Summarize tool and equivalent aggregation patterns in Prophecy
+- [Alteryx Transpose tool > Prophecy Unpivot Gem](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-transpose.md): Mapping between Alteryx’s Transpose tool and Prophecy’s Unpivot gem
+- [Alteryx Weighted Average tool > Prophecy Reformat and Aggregate Gems](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/tool-mapping/alteryx-transform-tools/alteryx-weighted-average.md): Mapping between Alteryx's Weighted Average tool and equivalent implementations in Prophecy
+- [Malformed file](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/troubleshooting/malformed-file.md): Learn what to do when you import a malformed file
+- [Alteryx to Databricks SQL Troubleshooting](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/troubleshooting/troubleshooting.md): Learn which troubleshooting guide to look at based on the error you see when transpiling from Alteryx to Databricks SQL
+- [Missing support for an Alteryx function](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/troubleshooting/unsupported-function.md): Learn what to do when you import an unsupported function
+- [Missing support for an Alteryx tool](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-prophecy-sql/troubleshooting/unsupported-tool.md): Learn what to do when you import an unsupported tool
+- [Alteryx to Spark tool mapping](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-spark/alteryx-components.md): List of supported Alteryx components and how they map to Spark projects
+- [Migrate Alteryx to Spark](https://docs.prophecy.ai/import-tool/alteryx/alteryx-to-spark/alteryx-to-spark.md): How to migrate from Alteryx to Spark
+- [DataStage](https://docs.prophecy.ai/import-tool/datastage/datastage.md): DataStage Transpiler in depth
+- [DataStage component mapping](https://docs.prophecy.ai/import-tool/datastage/datastage-components.md): List of supported DataStage components
+- [DataStage migration overview](https://docs.prophecy.ai/import-tool/datastage/getting-started-with-DataStage.md): A tutorial on using DataStage Transpiler
+- [Import Workflows into Prophecy](https://docs.prophecy.ai/import-tool/index.md)
+- [Informatica migration overview](https://docs.prophecy.ai/import-tool/informatica/getting-started-with-Informatica.md): A tutorial on using Informatica Transpiler
+- [Informatica](https://docs.prophecy.ai/import-tool/informatica/informatica.md): Informatica Transpiler in depth
+- [Migrate Informatica ICS to Spark](https://docs.prophecy.ai/import-tool/informatica/informatica-ics-to-spark/getting-started-with-informatica-ics.md): How to migrate from Informatica ICS to Prophecy
+- [Informatica ICS component mapping](https://docs.prophecy.ai/import-tool/informatica/informatica-ics-to-spark/informatica-ics-components.md): List of supported Informatica Intelligent Cloud Services (IICS) components and their equivalent Prophecy gems
+- [Informatica to Spark component mapping](https://docs.prophecy.ai/import-tool/informatica/informatica-to-spark/informatica-components.md): List of supported Informatica components
+- [Migrate Informatica to Spark](https://docs.prophecy.ai/import-tool/informatica/informatica-to-spark/informatica-to-spark.md): How to migrate from Informatica to Spark
+- [Component mapping to BigQuery SQL](https://docs.prophecy.ai/import-tool/informatica/informatica-to-sql/big-query-components-mappings.md): List of supported Informatica components and how they map to Prophecy SQL gems in BigQuery
+- [Data type mapping to BigQuery SQL](https://docs.prophecy.ai/import-tool/informatica/informatica-to-sql/big-query-data-types.md): List of how Informatica data types map to Prophecy data types in BigQuery SQL
+- [Function mapping to BigQuery SQL](https://docs.prophecy.ai/import-tool/informatica/informatica-to-sql/big-query-functions-mappings.md): List of supported Informatica functions and how they map to Prophecy functions in BigQuery SQL
+- [Migrate to BigQuery SQL](https://docs.prophecy.ai/import-tool/informatica/informatica-to-sql/informatica-to-sql.md): How to migrate from Informatica to BigQuery SQL
+- [Import tool migration overview](https://docs.prophecy.ai/import-tool/migration.md): Overview of performing migration from other tools
+- [Introduction](https://docs.prophecy.ai/index.md): Build, run, and manage AI-native data pipelines
+- [2025 releases](https://docs.prophecy.ai/releases/2025.md): Features and enhancements from new releases
+- [2026 releases](https://docs.prophecy.ai/releases/2026.md): Features and enhancements from new releases
+- [How do I find my Prophecy version?](https://docs.prophecy.ai/releases/find-version.md): Locate your current Prophecy deployment version through the UI or API
+- [Version chart](https://docs.prophecy.ai/releases/version-chart.md): View a list of all Prophecy versions and their corresponding library versions
+- [Version support lifecycle](https://docs.prophecy.ai/releases/version-support.md): Understand the different types of Prophecy versions and their support lifecycle
+
+## OpenAPI Specs
+
+- [openapi](https://docs.prophecy.ai/api-reference/connections/openapi.json)

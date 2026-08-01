@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.prophecy.ai/api-reference/introduction
+docs: https://docs.prophecy.ai/api-reference/introduction
+summary:
+  types: [http]
+  scheme: bearer
+  token_kind: personal-access-token
+  notes: >-
+    The Prophecy REST API authenticates with a per-user Personal Access Token
+    (PAT) sent as a bearer token in the request headers. Tokens are generated in
+    the Prophecy UI under Settings > Access Tokens (name + expiration). API
+    permissions are scoped to the token owner's user permissions. The OpenAPI
+    documents published by Prophecy do not declare a securityScheme, so this
+    profile is sourced from the API reference docs rather than derived.
+schemes:
+- name: personalAccessToken
+  type: http
+  scheme: bearer
+  bearerFormat: PAT
+  location: header
+  header: Authorization
+  sources:
+  - https://docs.prophecy.ai/api-reference/introduction
+identity:
+  providers: [SAML, LDAP, Microsoft Entra ID, Google SSO]
+  mfa: true
+  scim: optional
+  rbac: true
+  docs: https://docs.prophecy.ai/administration/management/authentication/authentication

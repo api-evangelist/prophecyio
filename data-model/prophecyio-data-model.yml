@@ -1,0 +1,53 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/
+notes: >-
+  Entity-relationship graph DERIVED from the path structure and identifiers of
+  the five published Prophecy OpenAPI documents. The specs declare no component
+  schemas, so relationships are inferred from path nesting and id parameters.
+entities:
+- name: Fabric
+  id: fabricId
+  description: An execution environment binding compute and data-storage connection info.
+  operations: [createFabric, getFabricById, updateFabric, deleteFabric]
+- name: Connection
+  id: connectionName
+  description: A configured integration to an external data provider, scoped to a fabric.
+  operations: [listConnectionsByFabric, createConnection, getConnectionByName, updateConnection, deleteConnection]
+- name: Secret
+  id: secretId
+  description: A stored credential (text, binary, username/password, or M2M OAuth) scoped to a fabric.
+  operations: [listSecretsByFabric, createSecret, getSecretById, updateSecret, deleteSecret]
+- name: Project
+  id: projectId
+  description: A Prophecy project of pipelines/jobs deployed to a fabric.
+  operations: [deployProject]
+- name: PipelineRun
+  id: runId
+  description: A triggered execution of a pipeline in a deployed project.
+  operations: [triggerPipelineRun, getPipelineRunStatus, runDataTests]
+relationships:
+- from: Connection
+  to: Fabric
+  kind: belongs_to
+  via: fabricId
+- from: Secret
+  to: Fabric
+  kind: belongs_to
+  via: fabricId
+- from: Fabric
+  to: Connection
+  kind: has_many
+  via: fabricId
+- from: Fabric
+  to: Secret
+  kind: has_many
+  via: fabricId
+- from: Project
+  to: Fabric
+  kind: deploys_to
+  via: fabricId
+- from: PipelineRun
+  to: Project
+  kind: belongs_to
+  via: projectId

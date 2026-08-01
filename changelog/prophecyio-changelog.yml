@@ -1,0 +1,18 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.prophecy.ai/releases/2026
+scheme: platform-release
+docs:
+- https://docs.prophecy.ai/releases/2026
+- https://docs.prophecy.ai/releases/2025
+notes: >-
+  Prophecy publishes dated release notes per year covering platform features and
+  enhancements. Entries below reference the canonical release-notes pages; the
+  live pages are the authoritative, continuously-updated source.
+entries:
+- period: '2026'
+  url: https://docs.prophecy.ai/releases/2026
+  highlights: Features and enhancements from 2026 platform releases.
+- period: '2025'
+  url: https://docs.prophecy.ai/releases/2025
+  highlights: Features and enhancements from 2025 platform releases.

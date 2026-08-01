@@ -1,0 +1,23 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Prophecy Project Deployment API
+  version: 1.0.0
+extends: openapi/prophecyio-projects-openapi.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: true
+    x-apievangelist-authentication: authentication/prophecyio-authentication.yml
+    x-apievangelist-conventions: conventions/prophecyio-conventions.yml
+    x-apievangelist-errors: errors/prophecyio-problem-types.yml
+- target: $.servers
+  update:
+  - url: https://app.prophecy.io
+    description: Prophecy Cloud (SaaS) deployment. Replace with your environment URL for Dedicated SaaS or Enterprise.
+- target: $.components.securitySchemes
+  update:
+    personalAccessToken:
+      type: http
+      scheme: bearer
+      bearerFormat: PAT
+      description: Per-user Prophecy Personal Access Token sent as a bearer token.

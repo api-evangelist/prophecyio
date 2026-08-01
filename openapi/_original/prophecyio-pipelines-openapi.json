@@ -1,0 +1,706 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Prophecy API - Pipeline Runs",
+    "description": "API for triggering and monitoring pipeline runs",
+    "version": "1.0.0"
+  },
+  "components": {
+    "parameters": {
+      "X-AUTH-TOKEN": {
+        "name": "X-AUTH-TOKEN",
+        "in": "header",
+        "description": "Prophecy authentication token. Required for all API requests.",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/trigger/pipeline": {
+      "parameters": [
+        {
+          "name": "X-AUTH-TOKEN",
+          "in": "header",
+          "description": "Prophecy access token",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "tags": [
+          "Pipeline Runs"
+        ],
+        "summary": "Trigger pipeline run",
+        "description": "Trigger the execution of a pipeline in a deployed project. This is useful when you want to automate pipeline runs without relying on Prophecy's built-in scheduling.",
+        "operationId": "triggerPipelineRun",
+        "requestBody": {
+          "description": "Pipeline run trigger parameters",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "fabricId",
+                  "pipelineName",
+                  "projectId"
+                ],
+                "properties": {
+                  "fabricId": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Unique identifier of the data fabric where the pipeline resides. You can find the ID in the URL of the fabric metadata page."
+                  },
+                  "pipelineName": {
+                    "type": "string",
+                    "description": "Name of the pipeline to be triggered."
+                  },
+                  "projectId": {
+                    "type": "string",
+                    "description": "Unique ID of the project where the pipeline resides. You can find this string in the URL of the project editor or metadata page."
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string",
+                      "description": "Pipeline parameter name and value. The key is the name of a pipeline parameter, and the value is the parameter value to assign."
+                    },
+                    "description": "Map of key-value pairs representing pipeline parameters. These will override default parameter values."
+                  },
+                  "branch": {
+                    "type": "string",
+                    "description": "Specific branch of the pipeline to execute. If omitted, the current working branch is used."
+                  },
+                  "version": {
+                    "type": "string",
+                    "description": "Specific version of the project containing the pipeline. If omitted, the latest version is used."
+                  },
+                  "processName": {
+                    "type": "string",
+                    "description": "Name of a specific gem within the pipeline. If provided, the pipeline will not run beyond this gem. If no processName is specified, the full pipeline is executed."
+                  }
+                }
+              },
+              "example": {
+                "fabricId": 33290,
+                "pipelineName": "bakehouse",
+                "parameters": {
+                  "franchise_id": "3000007"
+                },
+                "version": "2",
+                "projectId": "41459",
+                "processName": "franchise_reviews"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Pipeline run triggered successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "description": "Indicates whether the request to trigger the pipeline was successful. It does not reflect the success of the pipeline run."
+                    },
+                    "runId": {
+                      "type": "string",
+                      "description": "Unique identifier of the pipeline run."
+                    },
+                    "msg": {
+                      "type": "string",
+                      "description": "Error message if the request to trigger the pipeline was unsuccessful."
+                    }
+                  }
+                },
+                "examples": {
+                  "error": {
+                    "summary": "Response to a request with an invalid fabric ID",
+                    "value": {
+                      "success": false,
+                      "msg": "error in triggering pipeline: Success(Left(sdl.md.client.package$MetadataException: Fabric with uid `2290` not found)) (of class scala.util.Success)"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/trigger/pipeline/{runId}": {
+      "parameters": [
+        {
+          "name": "runId",
+          "in": "path",
+          "description": "Pipeline run ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "example": "MDAw-xZGYzYzc3LTYzdsSdfx--LTQ3NTQ1ZYjI2Mw=="
+          }
+        },
+        {
+          "name": "X-AUTH-TOKEN",
+          "in": "header",
+          "description": "Prophecy access token",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "tags": [
+          "Pipeline Runs"
+        ],
+        "summary": "Get pipeline run status",
+        "description": "Get the status of a triggered pipeline run, including an error message if the pipeline run fails.",
+        "operationId": "getPipelineRunStatus",
+        "responses": {
+          "200": {
+            "description": "Pipeline run status retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "description": "Indicates whether the request to retrieve the pipeline run status was successful. It does not reflect the success of the run."
+                    },
+                    "runId": {
+                      "type": "string",
+                      "description": "Unique identifier of the pipeline run."
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the pipeline run record was created. Returns ISO 8601 format, including microseconds."
+                    },
+                    "updatedAt": {
+                      "type": "string",
+                      "format": "date-time",
+                      "description": "Timestamp when the pipeline run record was last updated. Returns ISO 8601 format, including microseconds."
+                    },
+                    "projectId": {
+                      "type": "string",
+                      "description": "ID of the project associated with this pipeline run."
+                    },
+                    "pipelineName": {
+                      "type": "string",
+                      "description": "Name of the pipeline associated with this run."
+                    },
+                    "fabricId": {
+                      "type": "string",
+                      "description": "ID of the fabric where the pipeline resides."
+                    },
+                    "runStatus": {
+                      "type": "string",
+                      "enum": [
+                        "RUNNING",
+                        "ERROR",
+                        "SUCCEEDED"
+                      ],
+                      "description": "Execution status of the pipeline run."
+                    },
+                    "errorMessage": {
+                      "type": "string",
+                      "description": "Descriptive error message if the runStatus is ERROR."
+                    }
+                  }
+                },
+                "example": {
+                  "success": true,
+                  "runId": "MDAw-xZGYzYzc3LTYzdsSdfx--LTQ3NTQ1ZYjI2Mw==",
+                  "createdAt": "2025-06-17T18:01:49.275359",
+                  "updatedAt": "2025-06-17T18:02:41.712486",
+                  "projectId": "41459",
+                  "pipelineName": "bakehouse",
+                  "fabricId": "33290",
+                  "runStatus": "SUCCEEDED"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/orchestration/tests/run": {
+      "parameters": [
+        {
+          "name": "X-AUTH-TOKEN",
+          "in": "header",
+          "description": "Prophecy orchestration authentication token",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "post": {
+        "tags": [
+          "Pipeline Runs"
+        ],
+        "summary": "Run data tests",
+        "description": "Execute existing data tests for a project",
+        "operationId": "runDataTests",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "required": [
+                      "fabricId",
+                      "projectId"
+                    ],
+                    "properties": {
+                      "fabricId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "Unique identifier of the data fabric where the project resides. You can find the ID in the URL of the fabric metadata page."
+                      },
+                      "projectId": {
+                        "type": "string",
+                        "description": "Unique identifier of the project. You can find this string in the URL of the project editor or metadata page."
+                      },
+                      "branch": {
+                        "type": "string",
+                        "description": "Specific branch of the project to use. If omitted, the API uses the current working branch — typically the `dev` branch for projects using the Simple Git Storage Model."
+                      },
+                      "version": {
+                        "type": "string",
+                        "description": "Specific version of the project. If omitted, the API uses the latest published version of the project."
+                      },
+                      "tests": {
+                        "type": "array",
+                        "description": "Array of test configurations. Can include column tests, table tests, and project tests together. Model tests cannot be included here.",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "source": {
+                              "type": "string",
+                              "description": "Source name from `/prophecy-sources/sources.yml` file in the project code repository. \n\n**Required when running column tests or table tests.** Must be used together with `table`."
+                            },
+                            "table": {
+                              "type": "string",
+                              "description": "Table name from `/prophecy-sources/sources.yml` file in the project code repository. \n\n**Required when running column tests or table tests.** Must be used together with `source`."
+                            },
+                            "columnTests": {
+                              "type": "array",
+                              "description": "Array of column-level test configurations.",
+                              "items": {
+                                "type": "object",
+                                "required": [
+                                  "name",
+                                  "tests"
+                                ],
+                                "properties": {
+                                  "name": {
+                                    "type": "string",
+                                    "description": "Name of the column to test."
+                                  },
+                                  "tests": {
+                                    "type": "array",
+                                    "description": "Array of test definitions for this column. Each test must be a separate object with a `name` field.",
+                                    "items": {
+                                      "type": "object",
+                                      "required": [
+                                        "name"
+                                      ],
+                                      "properties": {
+                                        "name": {
+                                          "type": "string",
+                                          "description": "Name of the test to execute."
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "tableTests": {
+                              "type": "array",
+                              "description": "Array of table-level test configurations.",
+                              "items": {
+                                "type": "object",
+                                "required": [
+                                  "name"
+                                ],
+                                "properties": {
+                                  "name": {
+                                    "type": "string",
+                                    "description": "Name of the test to execute."
+                                  }
+                                }
+                              }
+                            },
+                            "projectTests": {
+                              "type": "array",
+                              "description": "Array of project-level test configurations.",
+                              "items": {
+                                "type": "object",
+                                "required": [
+                                  "name"
+                                ],
+                                "properties": {
+                                  "name": {
+                                    "type": "string",
+                                    "description": "Name of the project test to execute."
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "fabricId",
+                      "projectId",
+                      "modelName"
+                    ],
+                    "properties": {
+                      "fabricId": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "Unique identifier of the data fabric where the project resides. You can find the ID in the URL of the fabric metadata page."
+                      },
+                      "projectId": {
+                        "type": "string",
+                        "description": "Unique identifier of the project. You can find this string in the URL of the project editor or metadata page."
+                      },
+                      "modelName": {
+                        "type": "string",
+                        "description": "Name of the model to test. The API will run **all tests** for the specified model. \n\nModel tests must be run in a separate API call and cannot be mixed with column tests, table tests, or project tests."
+                      },
+                      "branch": {
+                        "type": "string",
+                        "description": "Specific branch of the project to use. If omitted, the API uses the currently checked out working branch."
+                      },
+                      "version": {
+                        "type": "string",
+                        "description": "Specific version of the project. If omitted, the API uses the latest published version of the project."
+                      },
+                      "tests": {
+                        "type": "array",
+                        "description": "Array containing a single empty object for model tests.",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "examples": {
+                "combinedTests": {
+                  "summary": "Request to run column tests, table tests, and project tests together",
+                  "value": {
+                    "fabricId": 4251,
+                    "projectId": "2419",
+                    "tests": [
+                      {
+                        "source": "hospital_patients",
+                        "table": "patient_details",
+                        "columnTests": [
+                          {
+                            "name": "age",
+                            "tests": [
+                              {
+                                "name": "not_null"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "id",
+                            "tests": [
+                              {
+                                "name": "not_null"
+                              },
+                              {
+                                "name": "unique"
+                              }
+                            ]
+                          }
+                        ],
+                        "tableTests": [
+                          {
+                            "name": "equal_row_count"
+                          }
+                        ]
+                      },
+                      {
+                        "projectTests": [
+                          {
+                            "name": "assert_table_not_empty"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "modelTests": {
+                  "summary": "Request to run model tests",
+                  "value": {
+                    "fabricId": 4251,
+                    "projectId": "2419",
+                    "branch": "update_patient_details",
+                    "modelName": "patient_transformed_details",
+                    "tests": [
+                      {}
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Test execution completed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "success",
+                    "data"
+                  ],
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "description": "Indicates whether the API request was successful."
+                    },
+                    "data": {
+                      "type": "object",
+                      "required": [
+                        "results",
+                        "summary",
+                        "dbtStdout"
+                      ],
+                      "properties": {
+                        "results": {
+                          "type": "array",
+                          "description": "Array of test execution results.",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "name",
+                              "status",
+                              "table",
+                              "columnName",
+                              "index",
+                              "time",
+                              "cause"
+                            ],
+                            "properties": {
+                              "name": {
+                                "type": "string",
+                                "description": "Name of the test that was executed."
+                              },
+                              "status": {
+                                "type": "string",
+                                "enum": [
+                                  "SUCCEEDED",
+                                  "FAILED",
+                                  "ERROR"
+                                ],
+                                "description": "Result of the test."
+                              },
+                              "table": {
+                                "type": "string",
+                                "description": "Table name associated with this test result."
+                              },
+                              "columnName": {
+                                "type": "string",
+                                "description": "Column name associated with this test result. Empty string for table-level and project-level tests."
+                              },
+                              "index": {
+                                "type": "integer",
+                                "description": "Index of the test result in the execution order."
+                              },
+                              "time": {
+                                "type": "number",
+                                "format": "float",
+                                "description": "Time taken to execute the test in seconds."
+                              },
+                              "cause": {
+                                "type": "string",
+                                "description": "Error message or failure cause if the test failed or errored. Empty string if the test succeeded."
+                              }
+                            }
+                          }
+                        },
+                        "dbtStdout": {
+                          "type": "string",
+                          "description": "Standard output from dbt test execution."
+                        },
+                        "summary": {
+                          "type": "object",
+                          "required": [
+                            "failed",
+                            "skip",
+                            "succeeded",
+                            "total",
+                            "warning"
+                          ],
+                          "properties": {
+                            "failed": {
+                              "type": "integer",
+                              "description": "Number of tests that failed."
+                            },
+                            "skip": {
+                              "type": "integer",
+                              "description": "Number of tests that were skipped."
+                            },
+                            "succeeded": {
+                              "type": "integer",
+                              "description": "Number of tests that succeeded."
+                            },
+                            "total": {
+                              "type": "integer",
+                              "description": "Total number of tests executed."
+                            },
+                            "warning": {
+                              "type": "integer",
+                              "description": "Number of tests that produced warnings."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "combinedTests": {
+                    "summary": "Response from running column tests, table tests, and project tests",
+                    "value": {
+                      "success": true,
+                      "data": {
+                        "results": [
+                          {
+                            "name": "equal_row_count",
+                            "status": "FAILED",
+                            "table": "patient_details",
+                            "columnName": "",
+                            "index": 0,
+                            "time": 3.55,
+                            "cause": "14:21:36  Failure in test source_tbt_test_tanmay_piyush_test_dbt_test_1_ (prophecy-sources/sources.yml)\n14:21:36    Got 1 result, configured to fail if != 0\n14:21:36"
+                          },
+                          {
+                            "name": "unique",
+                            "status": "SUCCEEDED",
+                            "table": "patient_details",
+                            "columnName": "id",
+                            "index": 0,
+                            "time": 0.81,
+                            "cause": ""
+                          },
+                          {
+                            "name": "not_null",
+                            "status": "SUCCEEDED",
+                            "table": "patient_details",
+                            "columnName": "age",
+                            "index": 0,
+                            "time": 4.14,
+                            "cause": ""
+                          },
+                          {
+                            "name": "not_null",
+                            "status": "SUCCEEDED",
+                            "table": "patient_details",
+                            "columnName": "id",
+                            "index": 0,
+                            "time": 0.64,
+                            "cause": ""
+                          },
+                          {
+                            "name": "assert_table_not_empty",
+                            "status": "SUCCEEDED",
+                            "table": "",
+                            "columnName": "",
+                            "index": 0,
+                            "time": 0.69,
+                            "cause": ""
+                          }
+                        ],
+                        "dbtStdout": "<long-output-from-dbt-test-execution>",
+                        "summary": {
+                          "failed": 1,
+                          "skip": 0,
+                          "succeeded": 4,
+                          "total": 5,
+                          "warning": 0
+                        }
+                      }
+                    }
+                  },
+                  "modelTests": {
+                    "summary": "Response from running model tests",
+                    "value": {
+                      "success": true,
+                      "data": {
+                        "results": [
+                          {
+                            "name": "not_null",
+                            "status": "SUCCEEDED",
+                            "table": "patient_transformed_details",
+                            "columnName": "name",
+                            "index": 0,
+                            "time": 0.72,
+                            "cause": ""
+                          },
+                          {
+                            "name": "equal_row_count",
+                            "status": "ERROR",
+                            "table": "patient_transformed_details",
+                            "columnName": "",
+                            "index": 0,
+                            "time": 0.73,
+                            "cause": "14:29:25  Failure in test equal_row_count_patient_transformed_details_ (models/schema.yml)\n14:29:25    Database Error in test equal_row_count_patient_transformed_details_ (models/schema.yml)\n  [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `country` cannot be resolved. Did you mean one of the following? [`age`, `city`, `name`, `id`]. SQLSTATE: 42703; line 11 pos 44"
+                          },
+                          {
+                            "name": "unique",
+                            "status": "SUCCEEDED",
+                            "table": "patient_transformed_details",
+                            "columnName": "name",
+                            "index": 0,
+                            "time": 0.67,
+                            "cause": ""
+                          }
+                        ],
+                        "dbtStdout": "<long-output-from-dbt-test-execution>",
+                        "summary": {
+                          "failed": 1,
+                          "skip": 0,
+                          "succeeded": 2,
+                          "total": 3,
+                          "warning": 0
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

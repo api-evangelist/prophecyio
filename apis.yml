@@ -1,9 +1,30 @@
 aid: prophecyio
 name: Prophecy.io
-description: Prophecy.io is a company surfaced as a portfolio company of insight-partners and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Prophecy is an AI-native, low-code data engineering and analytics platform for
+  building, running, and managing data pipelines across SQL and Apache Spark
+  environments on Databricks, Snowflake, and BigQuery. Data teams compose
+  pipelines visually with gems (or natural language via the AI Copilot), and
+  Prophecy generates clean Spark/SQL code committed to Git. The platform exposes
+  a REST API (the Prophecy Orchestration/Deployment API) for programmatically
+  managing fabrics, connections, secrets, deploying projects, and triggering
+  pipeline runs and data tests, authenticated with per-user Personal Access
+  Tokens. A companion CLI, the Prophecy Build Tool (PBT), integrates Prophecy
+  projects into external CI/CD such as GitHub Actions and Jenkins.
 url: https://raw.githubusercontent.com/api-evangelist/prophecyio/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.prophecy.io/favicon.ico
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,15 +33,139 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Data Engineering
+- Data Pipelines
+- ETL
+- Apache Spark
+- Databricks
+- Snowflake
+- Low-Code
+- Analytics
+- AI
+- Data Transformation
+apis:
+- aid: prophecyio:prophecyio-connections-api
+  name: Prophecy.io Connections API
+  description: The Connections API from Prophecy.io — 2 operation(s) for connections.
+  humanURL: https://docs.prophecy.ai/api-reference/introduction
+  baseURL: https://app.prophecy.io/api
+  tags:
+  - Connections
+  properties:
+  - type: OpenAPI
+    url: openapi/prophecyio-connections-api-openapi.yml
+- aid: prophecyio:prophecyio-fabrics-api
+  name: Prophecy.io Fabrics API
+  description: The Fabrics API from Prophecy.io — 2 operation(s) for fabrics.
+  humanURL: https://docs.prophecy.ai/api-reference/introduction
+  baseURL: https://app.prophecy.io/api
+  tags:
+  - Fabrics
+  properties:
+  - type: OpenAPI
+    url: openapi/prophecyio-fabrics-api-openapi.yml
+- aid: prophecyio:prophecyio-pipeline-runs-api
+  name: Prophecy.io Pipeline Runs API
+  description: The Pipeline Runs API from Prophecy.io — 3 operation(s) for pipeline runs.
+  humanURL: https://docs.prophecy.ai/api-reference/introduction
+  baseURL: https://app.prophecy.io/api
+  tags:
+  - Pipeline Runs
+  properties:
+  - type: OpenAPI
+    url: openapi/prophecyio-pipeline-runs-api-openapi.yml
+- aid: prophecyio:prophecyio-project-deployment-api
+  name: Prophecy.io Project Deployment API
+  description: The Project Deployment API from Prophecy.io — 1 operation(s) for project deployment.
+  humanURL: https://docs.prophecy.ai/api-reference/introduction
+  baseURL: https://app.prophecy.io/api
+  tags:
+  - Project Deployment
+  properties:
+  - type: OpenAPI
+    url: openapi/prophecyio-project-deployment-api-openapi.yml
+- aid: prophecyio:prophecyio-secrets-api
+  name: Prophecy.io Secrets API
+  description: The Secrets API from Prophecy.io — 2 operation(s) for secrets.
+  humanURL: https://docs.prophecy.ai/api-reference/introduction
+  baseURL: https://app.prophecy.io/api
+  tags:
+  - Secrets
+  properties:
+  - type: OpenAPI
+    url: openapi/prophecyio-secrets-api-openapi.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/prophecyio-trust-center.yml
+- type: DomainSecurity
+  url: security/prophecyio-domain-security.yml
 - type: Website
   url: https://www.prophecy.io/
+- type: DeveloperPortal
+  url: https://docs.prophecy.ai/
+- type: Documentation
+  url: https://docs.prophecy.ai/
+- type: APIReference
+  url: https://docs.prophecy.ai/api-reference/introduction
+- type: GettingStarted
+  url: https://docs.prophecy.ai/getting-started/
+- type: Blog
+  url: https://www.prophecy.io/blog
+- type: Pricing
+  url: https://www.prophecy.io/pricing
+- type: SignUp
+  url: https://app.prophecy.io/
+- type: GitHubOrganization
+  url: https://github.com/prophecy-io
+- type: StatusPage
+  url: https://status.prophecy.io/
+- type: Support
+  url: https://docs.prophecy.ai/administration/getting-help/get-in-touch
+- type: Authentication
+  url: authentication/prophecyio-authentication.yml
+- type: OpenAPI
+  name: Prophecy Connections API
+  url: openapi/prophecyio-connections-openapi.json
+- type: LLMsTxt
+  url: llms/prophecyio-llms.txt
+- type: Packages
+  url: packages/prophecyio-packages.yml
+- type: SDKs
+  url: packages/prophecyio-packages.yml
+- type: CLI
+  url: cli/prophecyio-cli.yml
+- type: MCPServer
+  url: mcp/prophecyio-mcp.yml
+- type: Lifecycle
+  url: lifecycle/prophecyio-lifecycle.yml
+- type: Deprecation
+  url: https://docs.prophecy.ai/releases/version-support
+- type: ChangeLog
+  url: changelog/prophecyio-changelog.yml
+- type: ErrorCatalog
+  url: errors/prophecyio-problem-types.yml
+- type: Conformance
+  url: conformance/prophecyio-conformance.yml
+- type: Compliance
+  url: https://trust.prophecy.ai/
+- type: Conventions
+  url: conventions/prophecyio-conventions.yml
+- type: DataModel
+  url: data-model/prophecyio-data-model.yml
+- type: Overlay
+  url: overlays/prophecyio-connections-overlay.yaml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 26
+  pass: local-v1

@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: generated
+source: openapi/
+skills:
+- file: prophecyio-deploy-and-run-pipeline.md
+  name: Deploy a Prophecy project and run its pipeline
+  api: openapi/prophecyio-projects-openapi.json
+  operations: [deployProject, triggerPipelineRun, getPipelineRunStatus, runDataTests]
+- file: prophecyio-provision-fabric.md
+  name: Provision a Prophecy fabric with a connection and secret
+  api: openapi/prophecyio-fabrics-openapi.json
+  operations: [createFabric, createSecret, createConnection, listConnectionsByFabric]

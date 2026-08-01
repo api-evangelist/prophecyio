@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.prophecy.ai/releases/version-support
+versioning:
+  scheme: platform-release
+  docs: https://docs.prophecy.ai/releases/version-chart
+  release_notes:
+  - https://docs.prophecy.ai/releases/2026
+  - https://docs.prophecy.ai/releases/2025
+  notes: >-
+    Prophecy ships versioned platform releases; the API itself is documented at
+    version 1.0.0. Library versions are tracked against platform versions on the
+    version chart.
+deprecation:
+  policy_url: https://docs.prophecy.ai/releases/version-support
+  notes: >-
+    The Version support lifecycle page documents Prophecy version types and
+    their support windows (supported vs end-of-life).
+sla:
+  notes: Uptime/SLA is contract-specific to the Prophecy edition; see status page.
+status_page: https://status.prophecy.io/
+deprecated_operations: []

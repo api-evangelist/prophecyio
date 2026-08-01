@@ -1,0 +1,67 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: openapi/
+notes: >-
+  No official hosted or published Prophecy MCP server was found (checked docs,
+  npm @modelcontextprotocol, and public MCP registries). This is a DERIVED
+  candidate tool list mapping each published Prophecy REST operation to a
+  proposed MCP tool. Not an official Prophecy product.
+server:
+  name: prophecyio
+  transport: http
+tools:
+- name: list_connections_by_fabric
+  description: List all connections and their details from a specific fabric.
+  source_operation: openapi/prophecyio-connections-openapi.json#listConnectionsByFabric
+- name: create_connection
+  description: Create a new connection in a specific fabric.
+  source_operation: openapi/prophecyio-connections-openapi.json#createConnection
+- name: get_connection_by_name
+  description: Retrieve details for a specific connection by its name.
+  source_operation: openapi/prophecyio-connections-openapi.json#getConnectionByName
+- name: update_connection
+  description: Update the properties of a specific connection.
+  source_operation: openapi/prophecyio-connections-openapi.json#updateConnection
+- name: delete_connection
+  description: Delete a specific connection by its name.
+  source_operation: openapi/prophecyio-connections-openapi.json#deleteConnection
+- name: create_fabric
+  description: Create a Prophecy fabric with optional secret and connection.
+  source_operation: openapi/prophecyio-fabrics-openapi.json#createFabric
+- name: get_fabric_by_id
+  description: Retrieve details for a specific fabric by its ID.
+  source_operation: openapi/prophecyio-fabrics-openapi.json#getFabricById
+- name: update_fabric
+  description: Update the name or description of an existing fabric.
+  source_operation: openapi/prophecyio-fabrics-openapi.json#updateFabric
+- name: delete_fabric
+  description: Delete a fabric by its ID.
+  source_operation: openapi/prophecyio-fabrics-openapi.json#deleteFabric
+- name: list_secrets_by_fabric
+  description: List all secrets and their details from a specific fabric.
+  source_operation: openapi/prophecyio-secrets-openapi.json#listSecretsByFabric
+- name: create_secret
+  description: Create a new secret in a specific fabric.
+  source_operation: openapi/prophecyio-secrets-openapi.json#createSecret
+- name: get_secret_by_id
+  description: Retrieve details for a specific secret by its ID.
+  source_operation: openapi/prophecyio-secrets-openapi.json#getSecretById
+- name: update_secret
+  description: Update the properties of a specific secret.
+  source_operation: openapi/prophecyio-secrets-openapi.json#updateSecret
+- name: delete_secret
+  description: Delete a specific secret by its ID.
+  source_operation: openapi/prophecyio-secrets-openapi.json#deleteSecret
+- name: trigger_pipeline_run
+  description: Trigger the execution of a pipeline in a deployed project.
+  source_operation: openapi/prophecyio-pipelines-openapi.json#triggerPipelineRun
+- name: get_pipeline_run_status
+  description: Get the status of a triggered pipeline run.
+  source_operation: openapi/prophecyio-pipelines-openapi.json#getPipelineRunStatus
+- name: run_data_tests
+  description: Execute existing data tests for a project.
+  source_operation: openapi/prophecyio-pipelines-openapi.json#runDataTests
+- name: deploy_project
+  description: Deploy a project with custom pipeline and project configuration to a fabric.
+  source_operation: openapi/prophecyio-projects-openapi.json#deployProject

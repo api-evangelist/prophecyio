@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/
+format: http-status
+notes: >-
+  Derived from the HTTP status codes declared across the five published Prophecy
+  OpenAPI documents. The specs do not use application/problem+json (RFC 9457);
+  errors are returned as JSON with a message. Response codes actually declared in
+  the specs are 200 (success), 400 (bad request), and 500 (internal server
+  error); 401/403/404 are the standard bearer-auth outcomes documented in the
+  API reference introduction.
+problems:
+- status: 400
+  title: Bad Request
+  meaning: The request payload or parameters were invalid (e.g. malformed connection or secret properties).
+  source_operation: openapi/prophecyio-secrets-openapi.json#updateSecret
+- status: 401
+  title: Unauthorized
+  meaning: Missing or invalid Personal Access Token in the Authorization header.
+  source: https://docs.prophecy.ai/api-reference/introduction
+- status: 403
+  title: Forbidden
+  meaning: The token's user lacks permission for the requested fabric/project resource.
+  source: https://docs.prophecy.ai/api-reference/introduction
+- status: 404
+  title: Not Found
+  meaning: The referenced fabric, connection, secret, project, or run does not exist.
+  source: https://docs.prophecy.ai/api-reference/introduction
+- status: 500
+  title: Internal Server Error
+  meaning: An unexpected error occurred creating the fabric or processing the request.
+  source_operation: openapi/prophecyio-fabrics-openapi.json#createFabric

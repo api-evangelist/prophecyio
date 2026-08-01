@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/ + https://docs.prophecy.ai/api-reference/introduction
+authentication:
+  style: bearer
+  token: personal-access-token
+  header: Authorization
+  ref: authentication/prophecyio-authentication.yml
+base_path:
+  prefix: /api
+  segments:
+  - /api/orchestration/fabric/... (fabrics, connections, secrets)
+  - /api/trigger/pipeline (pipeline runs)
+  - /api/deploy/project (project deployment)
+resource_model:
+  hierarchy: fabric > (connection | secret); project deploys to fabric; pipeline runs belong to a deployed project.
+  identifiers:
+    fabric: fabricId (path)
+    connection: connectionName (path)
+    secret: secretId (path)
+    pipeline_run: runId (path)
+idempotency:
+  supported: false
+  notes: >-
+    No idempotency-key header or parameter is documented in the API reference or
+    present in the OpenAPI documents. Create operations are keyed by
+    caller-supplied names/IDs (connectionName, secret name) which provides
+    natural upsert-style safety, but there is no formal Idempotency-Key contract.
+pagination:
+  supported: false
+  notes: List endpoints (connections, secrets) return all items for a fabric; no cursor/offset paging documented.
+versioning:
+  scheme: platform-release
+  api_version: 1.0.0
+  ref: lifecycle/prophecyio-lifecycle.yml
+errors:
+  envelope: json-message
+  ref: errors/prophecyio-problem-types.yml
+rate_limiting:
+  documented: false
+media_type: application/json

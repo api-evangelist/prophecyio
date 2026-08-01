@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.prophecy.ai/data-engineering/ci-cd/prophecy-build-tool/
+name: Prophecy Build Tool (PBT)
+binary: pbt
+package: packages/prophecyio-packages.yml
+docs: https://docs.prophecy.io/engineers/prophecy-build-tool/
+repo: https://github.com/SimpleDataLabsInc/prophecy-build-tool
+install:
+- method: pip
+  command: pip install prophecy-build-tool
+purpose: >-
+  Integrate Prophecy-generated projects (PySpark / Spark Scala pipelines and
+  jobs) into external CI/CD and orchestration by building, testing, validating,
+  and deploying them from the command line.
+commands:
+- name: build
+  description: Build all pipelines and packages in a Prophecy project.
+- name: test
+  description: Run the unit tests defined for the project's pipelines.
+- name: validate
+  description: Validate pipelines and jobs before deploying.
+- name: deploy
+  description: Deploy pipelines and jobs (e.g. to Databricks Workflows).
+- name: deploy --release-version
+  description: Deploy tagging a specific release version for the project.
+- name: build --path
+  description: Point PBT at a specific project path.
+auth:
+  notes: >-
+    PBT authenticates to Databricks / the target orchestration environment via
+    that environment's credentials; deployment to Prophecy fabrics uses the
+    Prophecy Personal Access Token where applicable.
+integrations:
+- GitHub Actions
+- Jenkins
+- Databricks Workflows
