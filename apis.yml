@@ -133,7 +133,7 @@ common:
   url: authentication/prophecyio-authentication.yml
 - type: OpenAPI
   name: Prophecy Connections API
-  url: openapi/prophecyio-connections-openapi.json
+  url: openapi/_original/prophecyio-connections-openapi.json
 - type: LLMsTxt
   url: llms/prophecyio-llms.txt
 - type: Packages
