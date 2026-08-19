@@ -1,0 +1,85 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Prophecy Connections Pipeline Runs API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pipeline Runs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Trigger pipeline run",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/trigger/pipeline",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Trigger the execution of a pipeline in a deployed project. This is useful when you want to automate pipeline runs without relying on Prophecy's built-in scheduling."
+        },
+        {
+          "info": {
+            "name": "Get pipeline run status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/trigger/pipeline/:runId",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "runId",
+                "value": "",
+                "type": "path",
+                "description": "Pipeline run ID"
+              }
+            ]
+          },
+          "docs": "Get the status of a triggered pipeline run, including an error message if the pipeline run fails."
+        },
+        {
+          "info": {
+            "name": "Run data tests",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/orchestration/tests/run",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Execute existing data tests for a project"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

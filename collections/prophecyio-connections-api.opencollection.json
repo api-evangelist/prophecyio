@@ -1,0 +1,169 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Prophecy Connections API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Connections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List connections per fabric",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId/connection",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the parent fabric"
+              }
+            ]
+          },
+          "docs": "List all connections and their details from a specific fabric"
+        },
+        {
+          "info": {
+            "name": "Add connection to fabric",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId/connection",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the parent fabric"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a new connection in a specific fabric"
+        },
+        {
+          "info": {
+            "name": "Retrieve connection details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId/connection/name/:connectionName",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the parent fabric"
+              },
+              {
+                "name": "connectionName",
+                "value": "",
+                "type": "path",
+                "description": "The unique name of the connection"
+              }
+            ]
+          },
+          "docs": "Retrieve details for a specific connection by its name"
+        },
+        {
+          "info": {
+            "name": "Update connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId/connection/name/:connectionName",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the parent fabric"
+              },
+              {
+                "name": "connectionName",
+                "value": "",
+                "type": "path",
+                "description": "The unique name of the connection"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update the properties of a specific connection"
+        },
+        {
+          "info": {
+            "name": "Delete connection",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId/connection/name/:connectionName",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the parent fabric"
+              },
+              {
+                "name": "connectionName",
+                "value": "",
+                "type": "path",
+                "description": "The unique name of the connection"
+              }
+            ]
+          },
+          "docs": "Delete a specific connection by its name"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

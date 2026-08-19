@@ -1,0 +1,118 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Prophecy Connections Fabrics API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Fabrics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a new fabric",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/orchestration/fabric",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a Prophecy fabric with optional secret and connection"
+        },
+        {
+          "info": {
+            "name": "Get fabric details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the fabric"
+              }
+            ]
+          },
+          "docs": "Retrieve details for a specific fabric by its ID"
+        },
+        {
+          "info": {
+            "name": "Update an existing fabric",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the fabric"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update the name or description of an existing fabric"
+        },
+        {
+          "info": {
+            "name": "Delete a fabric",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/api/orchestration/fabric/:fabricId",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "fabricId",
+                "value": "",
+                "type": "path",
+                "description": "The unique ID of the fabric"
+              }
+            ]
+          },
+          "docs": "Delete a fabric by its ID"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

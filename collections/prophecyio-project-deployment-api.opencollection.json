@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Prophecy Connections Project Deployment API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Project Deployment",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Deploy project",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/deploy/project",
+            "headers": [
+              {
+                "name": "X-AUTH-TOKEN",
+                "value": ""
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Deploy projects with custom pipeline and project configurations to specific fabrics. Use this API to automate project deployment with external CI/CD tools or deploy the same project to different environments with different configuration values."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

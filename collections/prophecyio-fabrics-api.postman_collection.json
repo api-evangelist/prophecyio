@@ -1,0 +1,523 @@
+{
+  "item": [
+    {
+      "id": "b124f51e-1538-4e5a-ac64-9e2e597c2727",
+      "name": "Fabrics",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c58bdefb-acfa-46fb-9606-293f828d915b",
+          "name": "Create a new fabric",
+          "request": {
+            "name": "Create a new fabric",
+            "description": {
+              "content": "Create a Prophecy fabric with optional secret and connection",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"teamName\": \"<string>\",\n  \"provider\": \"<string>\",\n  \"description\": \"<string>\",\n  \"dataplaneUrl\": \"<string>\",\n  \"secret\": {\n    \"kind\": \"<string>\",\n    \"subKind\": \"<string>\",\n    \"properties\": {\n      \"key_0\": 7883,\n      \"key_1\": \"string\",\n      \"key_2\": 47.78621280709605\n    }\n  },\n  \"connection\": {\n    \"name\": \"<string>\",\n    \"kind\": \"<string>\",\n    \"isDefaultWarehouseConnection\": \"<boolean>\",\n    \"properties\": {\n      \"key_0\": false\n    },\n    \"shouldValidate\": true,\n    \"shouldTest\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5ae3de01-3a43-4d4c-a3a7-0057fe2eab0d",
+              "name": "Fabric created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"API_Generated_Fabric\",\n  \"description\": \"This is a description of the fabric.\",\n  \"teamName\": \"devTeam\",\n  \"provider\": \"databricks\",\n  \"secret\": {\n    \"subKind\": \"text\",\n    \"properties\": {\n      \"name\": \"databricks-pat\",\n      \"value\": \"databricks-pat-value\"\n    },\n    \"kind\": \"prophecy\"\n  },\n  \"connection\": {\n    \"name\": \"databricks_pat_1\",\n    \"kind\": \"databricks\",\n    \"properties\": {\n      \"authType\": \"pat\",\n      \"jdbcUrl\": \"<databricks-jdbc>\",\n      \"catalog\": \"pipelinehub\",\n      \"schema\": \"katherine\",\n      \"token\": \"{{SECRET}}\"\n    },\n    \"isDefaultWarehouseConnection\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"10740\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "95a781ba-ce7c-40f3-8d38-85cd24de537a",
+              "name": "Fabric creation failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"API_Generated_Fabric\",\n  \"description\": \"This is a description of the fabric.\",\n  \"teamName\": \"devTeam\",\n  \"provider\": \"databricks\",\n  \"secret\": {\n    \"subKind\": \"text\",\n    \"properties\": {\n      \"name\": \"databricks-pat\",\n      \"value\": \"databricks-pat-value\"\n    },\n    \"kind\": \"prophecy\"\n  },\n  \"connection\": {\n    \"name\": \"databricks_pat_1\",\n    \"kind\": \"databricks\",\n    \"properties\": {\n      \"authType\": \"pat\",\n      \"jdbcUrl\": \"<databricks-jdbc>\",\n      \"catalog\": \"pipelinehub\",\n      \"schema\": \"katherine\",\n      \"token\": \"{{SECRET}}\"\n    },\n    \"isDefaultWarehouseConnection\": true\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"message\": \"Fabric creation failed due to : Fabric with name `API_fabric_test` already exists in the team\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d584cc27-129f-47ed-87a8-1dfe3acf4f16",
+          "name": "Get fabric details",
+          "request": {
+            "name": "Get fabric details",
+            "description": {
+              "content": "Retrieve details for a specific fabric by its ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the fabric"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "903efe5e-9862-489c-b393-3c661e6f2965",
+              "name": "Fabric resource found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the fabric"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"fabricID\": \"10740\",\n    \"name\": \"API_fabric_test\",\n    \"teamID\": \"1200\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a6470be-5a4a-400a-8bd6-1b66f6e699ee",
+          "name": "Update an existing fabric",
+          "request": {
+            "name": "Update an existing fabric",
+            "description": {
+              "content": "Update the name or description of an existing fabric",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the fabric"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c826b63d-21ab-4d4f-8f83-522728553061",
+              "name": "Fabric updated successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the fabric"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"API_fabric_test_update\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"10740\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "538524b0-81ac-4c52-9ab5-52b6cec28692",
+          "name": "Delete a fabric",
+          "request": {
+            "name": "Delete a fabric",
+            "description": {
+              "content": "Delete a fabric by its ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the fabric"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de12f89a-7eb4-4aa0-8075-a1016a4675d4",
+              "name": "Fabric deleted successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the fabric"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"10743\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "29c68930-b5f3-4797-b101-b3ba57e104db",
+    "name": "Prophecy Connections Fabrics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for managing Prophecy connections",
+      "type": "text/plain"
+    }
+  }
+}

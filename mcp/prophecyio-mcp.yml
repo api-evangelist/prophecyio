@@ -2,11 +2,9 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: openapi/
-notes: >-
-  No official hosted or published Prophecy MCP server was found (checked docs,
-  npm @modelcontextprotocol, and public MCP registries). This is a DERIVED
-  candidate tool list mapping each published Prophecy REST operation to a
-  proposed MCP tool. Not an official Prophecy product.
+notes: No official hosted or published Prophecy MCP server was found (checked docs, npm @modelcontextprotocol,
+  and public MCP registries). This is a DERIVED candidate tool list mapping each published Prophecy REST
+  operation to a proposed MCP tool. Not an official Prophecy product.
 server:
   name: prophecyio
   transport: http
@@ -65,3 +63,9 @@ tools:
 - name: deploy_project
   description: Deploy a project with custom pipeline and project configuration to a fabric.
   source_operation: openapi/prophecyio-projects-openapi.json#deployProject
+deployment:
+  mode: none
+  verified: derived
+  tools: 18
+  checked: '2026-08-12'
+  source: catalog MCP census

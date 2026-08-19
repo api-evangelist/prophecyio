@@ -1,0 +1,728 @@
+{
+  "item": [
+    {
+      "id": "cbbece5e-088e-4c42-897f-3c3718f519d6",
+      "name": "Connections",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "109bf58e-d866-46b7-a32a-6e61d195f9ed",
+          "name": "List connections per fabric",
+          "request": {
+            "name": "List connections per fabric",
+            "description": {
+              "content": "List all connections and their details from a specific fabric",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId",
+                "connection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the parent fabric"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4144a32b-c9b9-47ed-ac5a-d4688816d5aa",
+              "name": "A list of all connections in a fabric",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId",
+                    "connection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the parent fabric"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"Connections\": [\n      {\n        \"id\": \"<connection-id-1>\",\n        \"name\": \"bigquery_connection_1\",\n        \"kind\": \"bigquery\",\n        \"isDefaultWarehouseConnection\": true,\n        \"properties\": {\n          \"authType\": \"private_key\",\n          \"dataset\": \"dev\",\n          \"id\": \"\",\n          \"projectId\": \"dev-project-2222\",\n          \"serviceAccountKey\": {\n            \"kind\": \"prophecy\",\n            \"properties\": {\n              \"id\": \"1234\",\n              \"name\": \"bq_service_account_1\"\n            },\n            \"subKind\": \"text\",\n            \"type\": \"secret\"\n          }\n        }\n      },\n      {\n        \"id\": \"<connection-id-2>\",\n        \"name\": \"sharepoint_connection_1\",\n        \"kind\": \"sharepoint\",\n        \"isDefaultWarehouseConnection\": false,\n        \"properties\": {\n          \"clientId\": \"<client-id>\",\n          \"clientSecret\": {\n            \"kind\": \"prophecy\",\n            \"properties\": {\n              \"id\": \"4670\",\n              \"name\": \"client-secret-sharepoint\"\n            },\n            \"subKind\": \"text\",\n            \"type\": \"secret\"\n          },\n          \"siteUrl\": \"https://<site>.sharepoint.com/sites/site\",\n          \"tenantId\": \"<tenant-id>\"\n        }\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b3e7660e-0270-4588-8041-06a7385234f0",
+          "name": "Add connection to fabric",
+          "request": {
+            "name": "Add connection to fabric",
+            "description": {
+              "content": "Create a new connection in a specific fabric",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId",
+                "connection"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the parent fabric"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"kind\": \"<string>\",\n  \"properties\": \"<object>\",\n  \"isDefaultWarehouseConnection\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d7082de7-c59b-4ce3-bf13-448113dfe16d",
+              "name": "Connection created successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId",
+                    "connection"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the parent fabric"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"bigquery_connection_1\",\n  \"kind\": \"bigquery\",\n  \"isDefaultWarehouseConnection\": false,\n  \"properties\": {\n    \"authType\": \"private_key\",\n    \"dataset\": \"dev\",\n    \"id\": \"\",\n    \"projectId\": \"dev-project-2222\",\n    \"serviceAccountKey\": {\n      \"kind\": \"prophecy\",\n      \"properties\": {\n        \"id\": \"1234\",\n        \"name\": \"bq_service_account_1\"\n      },\n      \"subKind\": \"text\",\n      \"type\": \"secret\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"<connection-id>\",\n    \"name\": \"bigquery_connection_1\",\n    \"kind\": \"bigquery\",\n    \"isDefaultWarehouseConnection\": false,\n    \"properties\": {\n      \"authType\": \"private_key\",\n      \"dataset\": \"dev\",\n      \"id\": \"\",\n      \"projectId\": \"dev-project-2222\",\n      \"serviceAccountKey\": {\n        \"kind\": \"prophecy\",\n        \"properties\": {\n          \"id\": \"1234\",\n          \"name\": \"bq_service_account_1\"\n        },\n        \"subKind\": \"text\",\n        \"type\": \"secret\"\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4d0d609c-8e29-470f-9ecc-56564a03c288",
+          "name": "Retrieve connection details",
+          "request": {
+            "name": "Retrieve connection details",
+            "description": {
+              "content": "Retrieve details for a specific connection by its name",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId",
+                "connection",
+                "name",
+                ":connectionName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the parent fabric"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "connectionName",
+                  "description": "(Required) The unique name of the connection"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f2f8a1a4-4aec-4306-b487-70c11370d9d4",
+              "name": "Connection resource found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId",
+                    "connection",
+                    "name",
+                    ":connectionName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the parent fabric"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "connectionName",
+                      "description": "(Required) The unique name of the connection"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"<connection-id>\",\n    \"name\": \"synapse_1\",\n    \"kind\": \"synapse\",\n    \"isDefaultWarehouseConnection\": false,\n    \"properties\": {\n      \"database\": \"SynapseDev\",\n      \"password\": {\n        \"kind\": \"prophecy\",\n        \"properties\": {\n          \"id\": \"2719\",\n          \"name\": \"secret-synapse\"\n        },\n        \"subKind\": \"text\",\n        \"type\": \"secret\"\n      },\n      \"port\": \"1433\",\n      \"server\": \"<server-name>.sql.azuresynapse.net\",\n      \"username\": \"<username>\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b5aba097-7d82-4b04-80cb-b0a24c9bd733",
+          "name": "Update connection",
+          "request": {
+            "name": "Update connection",
+            "description": {
+              "content": "Update the properties of a specific connection",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId",
+                "connection",
+                "name",
+                ":connectionName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the parent fabric"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "connectionName",
+                  "description": "(Required) The unique name of the connection"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"kind\": \"<string>\",\n  \"isDefaultWarehouseConnection\": \"<boolean>\",\n  \"properties\": \"<object>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "63f13b00-7bd4-4b23-9abe-982b7f9c7d00",
+              "name": "Connection updated successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId",
+                    "connection",
+                    "name",
+                    ":connectionName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the parent fabric"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "connectionName",
+                      "description": "(Required) The unique name of the connection"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"bigquery_api_test\",\n  \"kind\": \"bigquery\",\n  \"isDefaultWarehouseConnection\": false,\n  \"properties\": {\n    \"authType\": \"private_key\",\n    \"dataset\": \"kw_dev_api\",\n    \"id\": \"\",\n    \"projectId\": \"product-internal-463917\",\n    \"serviceAccountKey\": {\n      \"kind\": \"prophecy\",\n      \"properties\": {\n        \"id\": \"4657\",\n        \"name\": \"bq_service_account_2\"\n      },\n      \"subKind\": \"text\",\n      \"type\": \"secret\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"d0ef2f82-5b66-4a17-b238-cc04c6f1cb3e\",\n    \"name\": \"bigquery_api_test\",\n    \"kind\": \"bigquery\",\n    \"isDefaultWarehouseConnection\": false,\n    \"properties\": {\n      \"authType\": \"private_key\",\n      \"dataset\": \"kw_dev_api\",\n      \"id\": \"\",\n      \"projectId\": \"product-internal-463917\",\n      \"serviceAccountKey\": {\n        \"kind\": \"prophecy\",\n        \"properties\": {\n          \"id\": \"4657\",\n          \"name\": \"bq_service_account_2\"\n        },\n        \"subKind\": \"text\",\n        \"type\": \"secret\"\n      }\n    }\n  },\n  \"message\": \"List(), List()\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e84407d8-56f7-4485-9034-91490f66cedb",
+              "name": "Validation error. Required fields are missing or invalid, or the `name` field does not match the connection name in the endpoint URL.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId",
+                    "connection",
+                    "name",
+                    ":connectionName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the parent fabric"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "connectionName",
+                      "description": "(Required) The unique name of the connection"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"bigquery_api_test\",\n  \"kind\": \"bigquery\",\n  \"isDefaultWarehouseConnection\": false,\n  \"properties\": {\n    \"authType\": \"private_key\",\n    \"dataset\": \"kw_dev_api\",\n    \"id\": \"\",\n    \"projectId\": \"product-internal-463917\",\n    \"serviceAccountKey\": {\n      \"kind\": \"prophecy\",\n      \"properties\": {\n        \"id\": \"4657\",\n        \"name\": \"bq_service_account_2\"\n      },\n      \"subKind\": \"text\",\n      \"type\": \"secret\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"message\": \"Update connection failed due to : No connection found for fabric 10740 and connection id bigquery_api_test_update\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d757718d-c39c-44d9-9900-63d60d967caf",
+          "name": "Delete connection",
+          "request": {
+            "name": "Delete connection",
+            "description": {
+              "content": "Delete a specific connection by its name",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "fabric",
+                ":fabricId",
+                "connection",
+                "name",
+                ":connectionName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "fabricId",
+                  "description": "(Required) The unique ID of the parent fabric"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "connectionName",
+                  "description": "(Required) The unique name of the connection"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5b50e32b-dcd9-4b32-9b36-36f3bd6d7d69",
+              "name": "Connection deleted successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "fabric",
+                    ":fabricId",
+                    "connection",
+                    "name",
+                    ":connectionName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "fabricId",
+                      "description": "(Required) The unique ID of the parent fabric"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "connectionName",
+                      "description": "(Required) The unique name of the connection"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy authentication token. Required for all API requests.",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"bigquery_api_test\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2eab90d9-299d-479f-913c-3fe5efd72909",
+    "name": "Prophecy Connections API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for managing Prophecy connections",
+      "type": "text/plain"
+    }
+  }
+}

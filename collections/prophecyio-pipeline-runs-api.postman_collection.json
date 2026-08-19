@@ -1,0 +1,352 @@
+{
+  "item": [
+    {
+      "id": "981e855a-398a-4f35-ac0d-046d5c4cf5ff",
+      "name": "Pipeline Runs",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b4c50188-0d71-45a6-9b20-d719bbce4d09",
+          "name": "Trigger pipeline run",
+          "request": {
+            "name": "Trigger pipeline run",
+            "description": {
+              "content": "Trigger the execution of a pipeline in a deployed project. This is useful when you want to automate pipeline runs without relying on Prophecy's built-in scheduling.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "trigger",
+                "pipeline"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy access token",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fabricId\": \"<long>\",\n  \"pipelineName\": \"<string>\",\n  \"projectId\": \"<string>\",\n  \"parameters\": {\n    \"key_0\": \"<string>\"\n  },\n  \"branch\": \"<string>\",\n  \"version\": \"<string>\",\n  \"processName\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0e31dfb7-8987-461d-98ea-934ba3dce6f4",
+              "name": "Pipeline run triggered successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "trigger",
+                    "pipeline"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy access token",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fabricId\": 33290,\n  \"pipelineName\": \"bakehouse\",\n  \"parameters\": {\n    \"franchise_id\": \"3000007\"\n  },\n  \"version\": \"2\",\n  \"projectId\": \"41459\",\n  \"processName\": \"franchise_reviews\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"msg\": \"error in triggering pipeline: Success(Left(sdl.md.client.package$MetadataException: Fabric with uid `2290` not found)) (of class scala.util.Success)\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "764b0ea6-01e6-41d1-a43a-c092ebd46c69",
+          "name": "Get pipeline run status",
+          "request": {
+            "name": "Get pipeline run status",
+            "description": {
+              "content": "Get the status of a triggered pipeline run, including an error message if the pipeline run fails.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "trigger",
+                "pipeline",
+                ":runId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "runId",
+                  "description": "(Required) Pipeline run ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy access token",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ca371c6c-cc48-4bc0-8733-82fa40906af3",
+              "name": "Pipeline run status retrieved successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "trigger",
+                    "pipeline",
+                    ":runId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "runId",
+                      "description": "(Required) Pipeline run ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy access token",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"runId\": \"MDAw-xZGYzYzc3LTYzdsSdfx--LTQ3NTQ1ZYjI2Mw==\",\n  \"createdAt\": \"2025-06-17T18:01:49.275359\",\n  \"updatedAt\": \"2025-06-17T18:02:41.712486\",\n  \"projectId\": \"41459\",\n  \"pipelineName\": \"bakehouse\",\n  \"fabricId\": \"33290\",\n  \"runStatus\": \"SUCCEEDED\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6de45e37-769b-4a6c-bad8-3ffc890fb709",
+          "name": "Run data tests",
+          "request": {
+            "name": "Run data tests",
+            "description": {
+              "content": "Execute existing data tests for a project",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "orchestration",
+                "tests",
+                "run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Prophecy orchestration authentication token",
+                "key": "X-AUTH-TOKEN",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fabricId\": \"<long>\",\n  \"projectId\": \"<string>\",\n  \"branch\": \"<string>\",\n  \"version\": \"<string>\",\n  \"tests\": [\n    {\n      \"source\": \"<string>\",\n      \"table\": \"<string>\",\n      \"columnTests\": [\n        {\n          \"name\": \"<string>\",\n          \"tests\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        },\n        {\n          \"name\": \"<string>\",\n          \"tests\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        }\n      ],\n      \"tableTests\": [\n        {\n          \"name\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\"\n        }\n      ],\n      \"projectTests\": [\n        {\n          \"name\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"source\": \"<string>\",\n      \"table\": \"<string>\",\n      \"columnTests\": [\n        {\n          \"name\": \"<string>\",\n          \"tests\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        },\n        {\n          \"name\": \"<string>\",\n          \"tests\": [\n            {\n              \"name\": \"<string>\"\n            },\n            {\n              \"name\": \"<string>\"\n            }\n          ]\n        }\n      ],\n      \"tableTests\": [\n        {\n          \"name\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\"\n        }\n      ],\n      \"projectTests\": [\n        {\n          \"name\": \"<string>\"\n        },\n        {\n          \"name\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2e10773b-a7b5-4d5f-8299-51e6de683567",
+              "name": "Test execution completed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "orchestration",
+                    "tests",
+                    "run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "(Required) Prophecy orchestration authentication token",
+                    "key": "X-AUTH-TOKEN",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fabricId\": 4251,\n  \"projectId\": \"2419\",\n  \"tests\": [\n    {\n      \"source\": \"hospital_patients\",\n      \"table\": \"patient_details\",\n      \"columnTests\": [\n        {\n          \"name\": \"age\",\n          \"tests\": [\n            {\n              \"name\": \"not_null\"\n            }\n          ]\n        },\n        {\n          \"name\": \"id\",\n          \"tests\": [\n            {\n              \"name\": \"not_null\"\n            },\n            {\n              \"name\": \"unique\"\n            }\n          ]\n        }\n      ],\n      \"tableTests\": [\n        {\n          \"name\": \"equal_row_count\"\n        }\n      ]\n    },\n    {\n      \"projectTests\": [\n        {\n          \"name\": \"assert_table_not_empty\"\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"results\": [\n      {\n        \"name\": \"equal_row_count\",\n        \"status\": \"FAILED\",\n        \"table\": \"patient_details\",\n        \"columnName\": \"\",\n        \"index\": 0,\n        \"time\": 3.55,\n        \"cause\": \"14:21:36  Failure in test source_tbt_test_tanmay_piyush_test_dbt_test_1_ (prophecy-sources/sources.yml)\\n14:21:36    Got 1 result, configured to fail if != 0\\n14:21:36\"\n      },\n      {\n        \"name\": \"unique\",\n        \"status\": \"SUCCEEDED\",\n        \"table\": \"patient_details\",\n        \"columnName\": \"id\",\n        \"index\": 0,\n        \"time\": 0.81,\n        \"cause\": \"\"\n      },\n      {\n        \"name\": \"not_null\",\n        \"status\": \"SUCCEEDED\",\n        \"table\": \"patient_details\",\n        \"columnName\": \"age\",\n        \"index\": 0,\n        \"time\": 4.14,\n        \"cause\": \"\"\n      },\n      {\n        \"name\": \"not_null\",\n        \"status\": \"SUCCEEDED\",\n        \"table\": \"patient_details\",\n        \"columnName\": \"id\",\n        \"index\": 0,\n        \"time\": 0.64,\n        \"cause\": \"\"\n      },\n      {\n        \"name\": \"assert_table_not_empty\",\n        \"status\": \"SUCCEEDED\",\n        \"table\": \"\",\n        \"columnName\": \"\",\n        \"index\": 0,\n        \"time\": 0.69,\n        \"cause\": \"\"\n      }\n    ],\n    \"dbtStdout\": \"<long-output-from-dbt-test-execution>\",\n    \"summary\": {\n      \"failed\": 1,\n      \"skip\": 0,\n      \"succeeded\": 4,\n      \"total\": 5,\n      \"warning\": 0\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "153a8b2f-fec4-4bba-a407-6db094fc4fc2",
+    "name": "Prophecy Connections Pipeline Runs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API for managing Prophecy connections",
+      "type": "text/plain"
+    }
+  }
+}
