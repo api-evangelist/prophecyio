@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Prophecy Connections Project Deployment API
-  description: API for managing Prophecy connections
+  title: Prophecy Project Deployment API
+  description: API for deploying projects to fabrics
   version: 1.0.0
 tags:
 - name: Project Deployment

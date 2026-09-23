@@ -1,11 +1,11 @@
 {
   "provider": "prophecyio",
   "sources": [
-    "prophecyio-connections-api-openapi.yml",
-    "prophecyio-fabrics-api-openapi.yml",
-    "prophecyio-pipeline-runs-api-openapi.yml",
-    "prophecyio-project-deployment-api-openapi.yml",
-    "prophecyio-secrets-api-openapi.yml"
+    "_original/prophecyio-connections-openapi.json",
+    "_original/prophecyio-fabrics-openapi.json",
+    "_original/prophecyio-pipelines-openapi.json",
+    "_original/prophecyio-projects-openapi.json",
+    "_original/prophecyio-secrets-openapi.json"
   ],
   "outputs": [
     "prophecyio-connections-api-openapi.yml",
@@ -17,6 +17,25 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (5 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "prophecyio-connections-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "prophecyio-connections-openapi.json: declared missing tag: Connections",
+    "prophecyio-fabrics-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "prophecyio-fabrics-openapi.json: declared missing tag: Fabrics",
+    "prophecyio-pipelines-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "prophecyio-pipelines-openapi.json: declared missing tag: Pipeline Runs",
+    "prophecyio-projects-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "prophecyio-projects-openapi.json: declared missing tag: Project Deployment",
+    "prophecyio-secrets-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "prophecyio-secrets-openapi.json: declared missing tag: Secrets",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "prophecyio-connections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "prophecyio-fabrics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "prophecyio-pipeline-runs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "prophecyio-project-deployment-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "prophecyio-secrets-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

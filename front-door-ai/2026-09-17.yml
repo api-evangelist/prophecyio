@@ -1,0 +1,31 @@
+# Front Door AI Index — prophecyio — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: prophecyio
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.prophecy.io
+  final_host: www.prophecy.ai
+  ownership: own
+  owner: prophecyio
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 50
+  host_score: 50
+  density: 23.14
+  words: 2161
+  tiers:
+    agentic: 17
+    core: 30
+    model: 3
+  ambiguous: 19
+  top_terms:
+    AI: 30
+    agent: 18
+    AI agent: 9
+    agentic: 5
+    Claude: 3
+    prompts: 3
+    automation: 1

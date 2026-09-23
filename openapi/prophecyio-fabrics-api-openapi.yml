@@ -1,7 +1,7 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Prophecy Connections Fabrics API
-  description: API for managing Prophecy connections
+  title: Prophecy Fabrics API
+  description: API for managing Prophecy fabrics
   version: 1.0.0
 tags:
 - name: Fabrics
