@@ -1,0 +1,57 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.prophecy.ai/pricing
+sources:
+- https://www.prophecy.ai/pricing
+- https://www.prophecy.io/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Professional
+published: true
+note: Four tiers; prices in USD. Starter free, Enterprise custom. Credit-based limits on workflow scheduling
+  and Alteryx/Informatica imports.
+plan_count: 4
+currency: USD
+plans:
+- name: Starter
+  price_text: Free
+  period: month
+  unit: individual user
+  included_quota: 20 credits/month, embedded DuckDB processing, data connectors, Prophecy-managed Git,
+    Transformation and Documentation Agents
+  overage: if you exceed the compute limits, you will be asked to provide a credit card to continue
+- name: Professional
+  price_text: $ 150 /month per user
+  price: 150
+  currency: USD
+  period: month
+  unit: per user
+  included_quota: 50 credits/user/month, Databricks/Snowflake/BigQuery processing, API access, project
+    sharing, initial onboarding call
+  overage: Pay-as-you-go for additional usage
+- name: Enterprise Express
+  price_text: $ 4000 /month
+  price: 4000
+  currency: USD
+  period: month
+  unit: up to 20 users, billed annually
+  included_quota: SSO, SCIM with audit logs, 100 Alteryx and Informatica workflow imports, organizational
+    Git, private LLM integration, white-glove onboarding
+- name: Enterprise
+  price_text: Custom Pricing
+  period: none
+  included_quota: Includes Enterprise Express plan, plus custom pricing for 20+ users
+rate_limit_statements:
+- 20 credits/month
+- 50 credits/user/month
+- 5 imports/month
+- 100 import limit
