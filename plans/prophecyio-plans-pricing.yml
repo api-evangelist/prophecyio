@@ -55,3 +55,44 @@ rate_limit_statements:
 - 50 credits/user/month
 - 5 imports/month
 - 100 import limit
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - seat
+  - subscription
+  units:
+  - seat
+  plans:
+  - name: Starter
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Professional
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Enterprise Express
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
