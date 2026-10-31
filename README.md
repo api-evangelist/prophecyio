@@ -64,6 +64,133 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Prophecy.io is a company surfaced as a portfolio company of insight-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Prophecy is an AI-native, low-code data engineering and analytics platform for building, running, and managing data pipelines across SQL and Apache Spark environments on Databricks, Snowflake, and BigQuery. Data teams compose pipelines visually with gems (or natural language via the AI Copilot), and Prophecy generates clean Spark/SQL code committed to Git. The platform exposes a REST API (the Prophecy Orchestration/Deployment API) for programmatically managing fabrics, connections, secrets, deploying projects, and triggering pipeline runs and data tests, authenticated with per-user Personal Access Tokens. A companion CLI, the Prophecy Build Tool (PBT), integrates Prophecy projects into external CI/CD such as GitHub Actions and Jenkins.
 
-Backed by: insight-partners — https://www.prophecy.io/
+**Areas:** Company · Data Engineering · Data Pipeline · ETL · Apache Spark · Databricks · Snowflake · Low-Code · Analytics · Artificial Intelligence · Data Transformation
+
+## Prophecy.io on APIs.io
+
+Everything profiled for Prophecy.io is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/prophecyio/](https://apis.io/providers/prophecyio/)** — or go straight to one of the APIs or properties below.
+
+### APIs (5)
+
+- [Prophecy.io Connections API](https://apis.io/apis/prophecyio/prophecyio-connections-api/) — The Connections API from Prophecy.io — 2 operation(s) for connections.
+- [Prophecy.io Fabrics API](https://apis.io/apis/prophecyio/prophecyio-fabrics-api/) — The Fabrics API from Prophecy.io — 2 operation(s) for fabrics.
+- [Prophecy.io Pipeline Runs API](https://apis.io/apis/prophecyio/prophecyio-pipeline-runs-api/) — The Pipeline Runs API from Prophecy.io — 3 operation(s) for pipeline runs.
+- [Prophecy.io Project Deployment API](https://apis.io/apis/prophecyio/prophecyio-project-deployment-api/) — The Project Deployment API from Prophecy.io — 1 operation(s) for project deployment.
+- [Prophecy.io Secrets API](https://apis.io/apis/prophecyio/prophecyio-secrets-api/) — The Secrets API from Prophecy.io — 2 operation(s) for secrets.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [prophecyio](https://apis.io/servers/prophecyio/prophecyio/)
+
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [Prophecy Connections API](https://apis.io/collections/prophecyio/open-prophecyio-connections-api/)
+- [Prophecy Connections Fabrics API](https://apis.io/collections/prophecyio/open-prophecyio-fabrics-api/)
+- [Prophecy Connections Pipeline Runs API](https://apis.io/collections/prophecyio/open-prophecyio-pipeline-runs-api/)
+- [Prophecy Connections Project Deployment API](https://apis.io/collections/prophecyio/open-prophecyio-project-deployment-api/)
+- [Prophecy Connections Secrets API](https://apis.io/collections/prophecyio/open-prophecyio-secrets-api/)
+
+#### Overlays (5)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Prophecyio Connections Overlay](https://apis.io/overlays/prophecyio/prophecyio-connections-overlay/)
+- [Prophecyio Fabrics Overlay](https://apis.io/overlays/prophecyio/prophecyio-fabrics-overlay/)
+- [Prophecyio Pipelines Overlay](https://apis.io/overlays/prophecyio/prophecyio-pipelines-overlay/)
+- [Prophecyio Projects Overlay](https://apis.io/overlays/prophecyio/prophecyio-projects-overlay/)
+- [Prophecyio Secrets Overlay](https://apis.io/overlays/prophecyio/prophecyio-secrets-overlay/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Prophecyio Authentication](https://apis.io/security/prophecyio/prophecyio-authentication/)
+- [Prophecyio Domain Security](https://apis.io/security/prophecyio/prophecyio-domain-security/)
+- [Prophecyio Trust Center](https://apis.io/security/prophecyio/prophecyio-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Prophecyio Plans Pricing](https://apis.io/plans/prophecyio/prophecyio-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.prophecy.io/)
+- [Documentation](https://docs.prophecy.ai/)
+- [Getting started](https://docs.prophecy.ai/getting-started/)
+- [API reference](https://docs.prophecy.ai/api-reference/introduction)
+- [Pricing](https://www.prophecy.io/pricing)
+- [Sign up](https://app.prophecy.io/)
+- [Support](https://docs.prophecy.ai/administration/getting-help/get-in-touch)
+- [Blog](https://www.prophecy.io/blog)
+- [Compliance](https://trust.prophecy.ai/)
+- [GitHub](https://github.com/prophecy-io)
+- [Status](https://status.prophecy.io/)
+
+## API Evangelist rating
+
+**Kin Score 47.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 41.1 |
+| Contract governance | 4.5 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 61.3 |
+| Access clarity | 57.9 |
+
+**Agent readiness 23.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 20.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/prophecyio/](https://apis.io/providers/prophecyio/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Prophecy.io: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/prophecyio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
